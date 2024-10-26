@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./Home.jsx";
-import Imt from "./Imt.jsx";
+import Bmi from "./Bmi.jsx";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/imt",
-    element: <Imt/>,
+    element: <Bmi/>,
   },
 ]);
 
