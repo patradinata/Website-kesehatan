@@ -3,15 +3,20 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./Home.jsx";
 import Bmi from "./Bmi.jsx";
+import PrediksiKelahiran from "./PrediksiKelahiran.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
   {
     path: "/imt",
-    element: <Bmi/>,
+    element: <Bmi />,
+  },
+  {
+    path: "/prediksikelahiran",
+    element: <PrediksiKelahiran />,
   },
 ]);
 
