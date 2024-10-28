@@ -170,6 +170,18 @@ const PrediksiKelahiran = () => {
               </ul>
             </form>
             <div>
+              <h2 className="text-lg sm:text-xl font-bold">Pengenalan HPHT</h2>
+              <p className="text-sm sm:text-base mt-2">
+                HPHT adalah singkatan dari Hari Pertama Haid Terakhir. HPHT
+                digunakan untuk menghitung usia kehamilan dan memperkirakan
+                tanggal persalinan. HPHT merupakan salah satu cara yang umum
+                digunakan untuk menghitung usia kehamilan, selain perhitungan
+                tanggal ovulasi dan pemeriksaan USG. Cara menghitung usia
+                kehamilan dengan HPHT adalah dengan menghitung dari HPHT hingga
+                tanggal saat ini.
+              </p>
+            </div>
+            <div>
               <h2 className="text-lg sm:text-xl font-bold">
                 Pengenalan Usia Janin dan Perkiraan Kelahiran
               </h2>
