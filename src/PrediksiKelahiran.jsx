@@ -127,6 +127,7 @@ const PrediksiKelahiran = () => {
                     onChange={(e) => setTanggal(e.target.value)}
                     className="w-full bg-gray-100 p-2 rounded-md"
                     type="date"
+                    placeholder="DD/MM/YYYY"
                   />
                   <button
                     className="w-full bg-blue-600 text-white font-medium py-2 rounded-md"

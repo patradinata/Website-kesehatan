@@ -15,3 +15,47 @@
 .backgroundHamil{
   background-image: url("/hamil.jpg");
 }
+
+ input[type=date],
+ input[type=time] {
+     border            : none;
+     box-sizing        : border-box;
+     outline           : 0;
+     padding-left      : .75rem;
+     display           : flex;
+     justify-content   : center;
+     position          : relative;
+     width             : 100%;
+     -moz-appearance   : textfield;
+     -webkit-appearance: none;
+     margin            : 0;
+ }
+
+ input[type=date]::placeholder,
+ input[type=time]::placeholder {
+     font-family: 'Roboto';
+     font-size  : 17px;
+     font-style : normal;
+     font-weight: 400;
+ }
+
+ input[type=date]::-webkit-calendar-picker-indicator,
+ input[type=time]::-webkit-calendar-picker-indicator {
+     background: none;
+     bottom    : 0;
+     color     : transparent;
+     cursor    : pointer;
+     height    : auto;
+     left      : 0;
+     position  : absolute;
+     right     : 0;
+     top       : 0;
+     width     : auto;
+ }
+
+
+ input[type=date]::-webkit-datetime-edit,
+ input[type=time]::-webkit-datetime-edit {
+     text-align: center;
+     width     : 100%;
+ }
