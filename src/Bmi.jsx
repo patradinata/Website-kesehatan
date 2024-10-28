@@ -53,8 +53,7 @@ const Bmi = () => {
     {
       linkCover:
         "https://cdn.hellosehat.com/wp-content/uploads/2019/11/shutterstock_539919946.jpg?w=750&q=75",
-      linkArtikel:
-        "/coverBmi2.webp",
+      linkArtikel: "/coverBmi2.webp",
       judulArtikel: "11 Olahraga Rutin untuk Bantu Menurunkan Berat Badan Anda",
       authorArtikel: "Hallo Sehat",
     },
@@ -167,8 +166,8 @@ const Bmi = () => {
           </form>
           <div className="px-0 lg:px-60 xl:px-96 space-y-10">
             <div>
-              <h2 className="text-xl font-bold">Pengenalan BMI</h2>
-              <p className="mt-2">
+              <h2 className="text-lg sm:text-xl font-bold">Pengenalan BMI</h2>
+              <p className="text-sm sm:text-base mt-2">
                 BMI (Body Mass Index) atau Indeks Massa Tubuh adalah ukuran yang
                 digunakan untuk menilai apakah berat badan seseorang
                 proporsional dengan tinggi badannya. BMI digunakan sebagai
@@ -178,8 +177,8 @@ const Bmi = () => {
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-bold">Tabel BMI</h2>
-              <p className="mt-2">
+              <h2 className="text-lg sm:text-xl font-bold">Tabel BMI</h2>
+              <p className="text-sm sm:text-base mt-2">
                 Ini adalah berat badan yang direkomendasikan Organisasi
                 Kesehatan Dunia (WHO) berdasarkan nilai BMI. Ini digunakan untuk
                 pria dan wanita.
@@ -189,64 +188,66 @@ const Bmi = () => {
                 cellPadding={10}
               >
                 <tr>
-                  <th className="border border-collapse border-black">BMI</th>
-                  <th className="border border-collapse border-black">
+                  <th className="text-sm sm:text-base border border-collapse border-black">
+                    BMI
+                  </th>
+                  <th className="text-sm sm:text-base border border-collapse border-black">
                     Klasifikasi
                   </th>
                 </tr>
                 <tr>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     {"<"} 18,5
                   </td>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     Underweight
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     18,5 - 24,9
                   </td>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     Normal
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     25 - 29,9
                   </td>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     Overweight
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     30 - 25
                   </td>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     Obesitas kelas I
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     35 - 40
                   </td>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     Obesitas kelas II
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     {">"} 40
                   </td>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     Obesitas kelas III
                   </td>
                 </tr>
               </table>
             </div>
             <div>
-              <h2 className="text-xl font-bold">Grafik </h2>
-              <p className="mt-2">
+              <h2 className="text-lg sm:text-xl font-bold">Grafik </h2>
+              <p className="text-sm sm:text-base mt-2">
                 Ini adalah grafik kategori BMI berdasarkan data Organisasi
                 Kesehatan Dunia. Garis putus-putus mewakili subdivisi dalam
                 kategorisasi utama.
@@ -254,13 +255,15 @@ const Bmi = () => {
               <img src="/grafikBmi.svg" alt="" />
             </div>
             <div>
-              <h2 className="text-xl font-bold">Resiko overweight</h2>
-              <p className="my-2">
+              <h2 className="text-lg sm:text-xl font-bold">
+                Resiko overweight
+              </h2>
+              <p className="text-sm sm:text-base my-2">
                 Kelebihan berat badan meningkatkan risiko sejumlah penyakit dan
                 kondisi kesehatan serius. Di bawah ini adalah daftar risiko
                 tersebut:
               </p>
-              <ul className="list-disc list-inside">
+              <ul className="text-sm sm:text-base list-disc list-inside">
                 <li>Hipertensi (Tekanan Darah Tinggi)</li>
                 <li>Kolesterol Tinggi</li>
                 <li>Gangguan Pernapasan (Asma dan Sesak Napas)</li>
@@ -269,12 +272,14 @@ const Bmi = () => {
               </ul>
             </div>
             <div>
-              <h2 className="text-xl font-bold">Resiko underweight</h2>
-              <p className="my-2">
+              <h2 className="text-lg sm:text-xl font-bold">
+                Resiko underweight
+              </h2>
+              <p className="text-sm sm:text-base my-2">
                 Kekurangan berat badan mempunyai risiko tersendiri, seperti yang
                 tercantum di bawah ini:
               </p>
-              <ul className="list-disc list-inside">
+              <ul className="text-sm sm:text-base list-disc list-inside">
                 <li>Sistem Kekebalan Tubuh yang Lemah</li>
                 <li>Kerapuhan Tulang (Osteoporosis)</li>
                 <li>Kehilangan Massa Otot</li>
@@ -283,8 +288,8 @@ const Bmi = () => {
               </ul>
             </div>
             <div>
-              <h2 className="text-xl font-bold">Formula BMI</h2>
-              <p className="my-2">
+              <h2 className="text-lg sm:text-xl font-bold">Formula BMI</h2>
+              <p className="text-sm sm:text-base my-2">
                 Di bawah ini rumus yang digunakan untuk menghitung BMI dalam
                 Sistem Satuan Internasional (SI)
               </p>
@@ -345,7 +350,7 @@ const Bmi = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-xl font-bold">Seputar BMI</h2>
+              <h2 className="text-lg sm:text-xl font-bold">Seputar BMI</h2>
               <div className="mt-2 grid grid-cols-12 gap-5">
                 {artikel.map((data, index) => (
                   <a
