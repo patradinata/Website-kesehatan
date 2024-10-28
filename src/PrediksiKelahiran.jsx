@@ -115,7 +115,7 @@ const PrediksiKelahiran = () => {
             className="flex items-center gap-x-1 bg-blue-600 px-5 py-2 rounded-3xl text-white"
             to="/"
           >
-            <p className="text-xl font-semibold">Back</p>
+            <p className="text-base sm:text-xl font-semibold">Back</p>
           </Link>
         </div>
         <div className="h-0 lg:h-[400px] backgroundHamil bg-no-repeat bg-cover bg-center flex justify-center items-center"></div>
