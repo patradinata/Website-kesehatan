@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { DatePicker } from "antd";
 
 const PrediksiKelahiran = () => {
   let [tanggal, setTanggal] = useState(false);
@@ -9,6 +10,10 @@ const PrediksiKelahiran = () => {
   const [usiaKehamilan, setUsiaKehamilan] = useState();
   const [prediksiKelahiran, setPrediksiKelahiran] = useState();
   const [formatUsiaJanin, setFormatUsiaJanin] = useState();
+
+  const handleDatePicker = (date, dateString) => {
+    setTanggal(dateString);
+  };
 
   const kalkulasiPrediksiKelahiran = (e) => {
     e.preventDefault();
@@ -123,12 +128,7 @@ const PrediksiKelahiran = () => {
               <ul className="flex flex-col sm:flex-row justify-between gap-y-5">
                 <li className="flex flex-col items-start gap-y-5">
                   <label htmlFor="">Masukkan HPHT</label>
-                  <input
-                    onChange={(e) => setTanggal(e.target.value)}
-                    className="w-full bg-gray-100 p-2 rounded-md"
-                    type="date"
-                    placeholder="DD/MM/YYYY"
-                  />
+                  <DatePicker className="w-full" onChange={handleDatePicker} />
                   <button
                     className="w-full bg-blue-600 text-white font-medium py-2 rounded-md"
                     type="submit"
