@@ -75,6 +75,32 @@ const PrediksiKelahiran = () => {
     setPrediksiKelahiran(prediksiKelahiran);
   };
 
+  const artikel = [
+    {
+      linkCover:
+        "https://d1bpj0tv6vfxyp.cloudfront.net/articles/9b37a862-40a9-46cc-a17c-e700dd292bb6_article_image_url.webp",
+      linkArtikel:
+        "https://www.halodoc.com/artikel/cukupi-kebutuhan-nutrisi-ibu-hamil-dengan-5-makanan-ini?srsltid=AfmBOoqEYhxwVX8J43c6PMQRXDwHeyfajNNnQhnwkGWsGXtyliaNUwXF",
+      judulArtikel: "Cukupi Kebutuhan Nutrisi Ibu Hamil dengan 5 Makanan Ini",
+      authorArtikel: "Halodoc",
+    },
+    {
+      linkCover:
+        "https://sehatnegeriku.kemkes.go.id/wp-content/uploads/2024/06/Olahraga-Bagi-Ibu-Hamil_Foto-Shutterstock-700x536.jpg",
+      linkArtikel:
+        "https://sehatnegeriku.kemkes.go.id/baca/blog/20240626/4445835/olahraga-bagi-ibu-hamil/#:~:text=Ibu%20hamil%20pada%20trimester%20pertama,kondisi%20perut%20ibu%20telah%20membesar.",
+      judulArtikel: "Olahraga bagi Ibu Hamil",
+      authorArtikel: "Sehat Negriku",
+    },
+    {
+      linkCover:
+        "https://www.prenagen.com/images/uploads/1569219946-6-cara-menjaga-bayi-dalam-kandungan-agar-selalu-sehat-dan-kuat.jpg",
+      linkArtikel:
+        "https://www.prenagen.com/id/6-cara-menjaga-bayi-dalam-kandungan-agar-selalu-sehat-dan-kuat",
+      judulArtikel: "Tips Agar Janin Sehat dan Sempurna Hingga Dilahirkan",
+      authorArtikel: "Prenagen",
+    },
+  ];
 
   return (
     <>
@@ -94,12 +120,12 @@ const PrediksiKelahiran = () => {
           </h1>
           <div className="px-0 lg:px-60 xl:px-96 space-y-10">
             <form onSubmit={kalkulasiPrediksiKelahiran}>
-              <ul className="flex justify-between">
+              <ul className="flex flex-col sm:flex-row justify-between gap-y-5">
                 <li className="flex flex-col items-start gap-y-5">
                   <label htmlFor="">Masukkan HPHT</label>
                   <input
                     onChange={(e) => setTanggal(e.target.value)}
-                    className="bg-gray-100 p-2 rounded-md"
+                    className="w-full bg-gray-100 p-2 rounded-md"
                     type="date"
                   />
                   <button
@@ -110,22 +136,30 @@ const PrediksiKelahiran = () => {
                   </button>
                 </li>
                 {tanggalHpht ? (
-                  <li>
+                  <li className="bg-gray-100 sm:bg-transparent p-3 rounded-md">
                     <table>
                       <tr>
-                        <td>HPHT</td>
-                        <td className="px-5">:</td>
-                        <td>{tanggalHpht}</td>
+                        <td className=" text-sm sm:text-base">HPHT</td>
+                        <td className="px-5 text-sm sm:text-base">:</td>
+                        <td className=" text-sm sm:text-base">{tanggalHpht}</td>
                       </tr>
                       <tr>
-                        <td>prediksi kelahiran</td>
+                        <td className=" text-sm sm:text-base">
+                          prediksi kelahiran
+                        </td>
                         <td className="px-5">:</td>
-                        <td>{prediksiKelahiran}</td>
+                        <td className=" text-sm sm:text-base">
+                          {prediksiKelahiran}
+                        </td>
                       </tr>
                       <tr>
-                        <td>perkiraan usia janin</td>
-                        <td className="px-5">:</td>
-                        <td>{usiaKehamilan + " " + formatUsiaJanin}</td>
+                        <td className=" text-sm sm:text-base">
+                          perkiraan usia janin
+                        </td>
+                        <td className="px-5 text-sm sm:text-base">:</td>
+                        <td className=" text-sm sm:text-base">
+                          {usiaKehamilan + " " + formatUsiaJanin}
+                        </td>
                       </tr>
                     </table>
                   </li>
@@ -135,181 +169,147 @@ const PrediksiKelahiran = () => {
               </ul>
             </form>
             <div>
-              <h2 className="text-xl font-bold">Pengenalan BMI</h2>
+              <h2 className="text-xl font-bold">
+                Pengenalan Usia Janin dan Perkiraan Kelahiran
+              </h2>
               <p className="mt-2">
-                BMI (Body Mass Index) atau Indeks Massa Tubuh adalah ukuran yang
-                digunakan untuk menilai apakah berat badan seseorang
-                proporsional dengan tinggi badannya. BMI digunakan sebagai
-                indikator apakah seseorang berada dalam kategori berat badan
-                yang sehat, kekurangan berat badan, kelebihan berat badan, atau
-                obesitas.
+                Usia janin dan perkiraan waktu kelahiran adalah cara untuk
+                mengetahui perkembangan janin dalam kandungan dan menentukan
+                kapan kemungkinan bayi akan lahir. Informasi ini sangat berguna
+                bagi ibu hamil dan tenaga medis untuk memantau kesehatan serta
+                pertumbuhan janin.
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-bold">Tabel BMI</h2>
+              <h2 className="text-xl font-bold">
+                Tabel Usia Janin dan Perkembangan
+              </h2>
               <p className="mt-2">
-                Ini adalah berat badan yang direkomendasikan Organisasi
-                Kesehatan Dunia (WHO) berdasarkan nilai BMI. Ini digunakan untuk
-                pria dan wanita.
+                Ini adalah tabel perkiraan perkembangan janin berdasarkan usia
+                kehamilan dalam minggu:
               </p>
               <table
                 className="border border-collapse border-black mt-10"
                 cellPadding={10}
               >
                 <tr>
-                  <th className="border border-collapse border-black">BMI</th>
                   <th className="border border-collapse border-black">
-                    Klasifikasi
+                    Usia Kehamilan (Minggu)
+                  </th>
+                  <th className="border border-collapse border-black">
+                    Perkembangan Janin
                   </th>
                 </tr>
                 <tr>
                   <td className="border border-collapse border-black">
-                    {"<"} 18,5
+                    4–12 minggu
                   </td>
                   <td className="border border-collapse border-black">
-                    Underweight
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-collapse border-black">
-                    18,5 - 24,9
-                  </td>
-                  <td className="border border-collapse border-black">
-                    Normal
+                    Pembentukan organ dasar janin
                   </td>
                 </tr>
                 <tr>
                   <td className="border border-collapse border-black">
-                    25 - 29,9
+                    13–24 minggu
                   </td>
                   <td className="border border-collapse border-black">
-                    Overweight
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-collapse border-black">
-                    30 - 25
-                  </td>
-                  <td className="border border-collapse border-black">
-                    Obesitas kelas I
+                    Perkembangan tulang dan otot
                   </td>
                 </tr>
                 <tr>
                   <td className="border border-collapse border-black">
-                    35 - 40
+                    25–36 minggu
                   </td>
                   <td className="border border-collapse border-black">
-                    Obesitas kelas II
+                    Meningkatnya berat dan panjang janin
                   </td>
                 </tr>
                 <tr>
                   <td className="border border-collapse border-black">
-                    {">"} 40
+                    37–40 minggu
                   </td>
                   <td className="border border-collapse border-black">
-                    Obesitas kelas III
+                    Janin sudah siap dilahirkan
                   </td>
                 </tr>
               </table>
             </div>
             <div>
-              <h2 className="text-xl font-bold">Grafik </h2>
-              <p className="mt-2">
-                Ini adalah grafik kategori BMI berdasarkan data Organisasi
-                Kesehatan Dunia. Garis putus-putus mewakili subdivisi dalam
-                kategorisasi utama.
-              </p>
-              <img src="/grafikBmi.svg" alt="" />
-            </div>
-            <div>
-              <h2 className="text-xl font-bold">Resiko overweight</h2>
+              <h2 className="text-xl font-bold">
+                Risiko Kesehatan Berdasarkan Usia Janin
+              </h2>
               <p className="my-2">
-                Kelebihan berat badan meningkatkan risiko sejumlah penyakit dan
-                kondisi kesehatan serius. Di bawah ini adalah daftar risiko
-                tersebut:
+                Usia kehamilan yang terlalu dini atau terlambat memiliki risiko
+                kesehatan tertentu. Berikut beberapa risiko kesehatan:
               </p>
+              <ul className="list-disc list-inside my-5">
+                <p className="font-bold">Kelahiran Dini (Prematur)</p>
+                <li>Risiko gangguan pernapasan</li>
+                <li>Sistem kekebalan tubuh yang belum matang</li>
+                <li>Risiko gangguan pencernaan dan perkembangan</li>
+              </ul>
               <ul className="list-disc list-inside">
-                <li>Hipertensi (Tekanan Darah Tinggi)</li>
-                <li>Kolesterol Tinggi</li>
-                <li>Gangguan Pernapasan (Asma dan Sesak Napas)</li>
-                <li>Penyakit Ginjal Kronis</li>
-                <li>Masalah Sendi dan Tulang (Osteoarthritis)</li>
+                <p className="font-bold">Kehamilan Lewat Waktu (Post-Term)</p>
+                <li>Pertumbuhan janin yang berlebihan (makrosomia)</li>
+                <li>Risiko komplikasi saat persalinan</li>
+                <li>Plasenta yang mungkin kurang berfungsi dengan baik</li>
               </ul>
             </div>
             <div>
-              <h2 className="text-xl font-bold">Resiko underweight</h2>
+              <h2 className="text-xl font-bold">
+                Formula Menghitung Perkiraan Kelahiran
+              </h2>
               <p className="my-2">
-                Kekurangan berat badan mempunyai risiko tersendiri, seperti yang
-                tercantum di bawah ini:
+                Perkiraan tanggal kelahiran dapat dihitung dengan rumus sebagai
+                berikut.
               </p>
-              <ul className="list-disc list-inside">
-                <li>Sistem Kekebalan Tubuh yang Lemah</li>
-                <li>Kerapuhan Tulang (Osteoporosis)</li>
-                <li>Kehilangan Massa Otot</li>
-                <li>Anemia</li>
-                <li>Gangguan Pertumbuhan pada Anak dan Remaja</li>
-              </ul>
+              <div className="flex flex-col items-start space-y-5 mt-5">
+                <code className="w-full bg-gray-200 p-3 rounded-md">
+                  HPHT + 1 tahun = x
+                </code>
+                <code className="w-full bg-gray-200 p-3 rounded-md">
+                  x + 7 hari = y
+                </code>
+                <code className="w-full bg-gray-200 p-3 rounded-md">
+                  y - 3 bulan = tanggal kelahiran
+                </code>
+                <p className="my-5">Contoh :</p>
+                <code className="w-full bg-gray-200 p-3 rounded-md">
+                  12 Juni 2024 + 1 tahun = 12 Juni 2025
+                </code>
+                <code className="w-full bg-gray-200 p-3 rounded-md">
+                  12 Juni 2025 + 7 hari = 19 Juni 2025
+                </code>
+                <code className="w-full bg-gray-200 p-3 rounded-md">
+                  19 Juni 2025 - 3 bulan = 19 Maret 2025
+                </code>
+              </div>
             </div>
             <div>
-              <h2 className="text-xl font-bold">Formula BMI</h2>
-              <p className="my-2">
-                Di bawah ini rumus yang digunakan untuk menghitung BMI dalam
-                Sistem Satuan Internasional (SI)
-              </p>
-              <div className="my-10">
-                <td>
-                  <table cellSpacing="0" cellPadding="0">
-                    <tbody>
-                      <tr>
-                        <td>BMI=</td>
-                        <td>
-                          <table cellSpacing="" cellPadding="0">
-                            <tbody>
-                              <tr>
-                                <td className="text-center">berat (kg)</td>
-                              </tr>
-                              <tr>
-                                <td
-                                  className="bg-black"
-                                  width="100"
-                                  height="1"
-                                ></td>
-                              </tr>
-                              <tr>
-                                <td className="text-center">
-                                  tinggi<sup>2</sup> (m)
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                        <td>&nbsp;=</td>
-                        <td>
-                          <table cellSpacing="0" cellPadding="0">
-                            <tbody>
-                              <tr>
-                                <td className="text-center">70</td>
-                              </tr>
-                              <tr>
-                                <td
-                                  className="bg-black"
-                                  width="50"
-                                  height="1"
-                                ></td>
-                              </tr>
-                              <tr>
-                                <td className="text-center">
-                                  1.72<sup>2</sup>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                        <td>&nbsp;= 23.66</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
+              <h2 className="text-xl font-bold">Seputar kehamilan</h2>
+              <div className="mt-2 grid grid-cols-12 gap-5">
+                {artikel.map((data, index) => (
+                  <a
+                    key={index}
+                    target="_blank"
+                    href={data.linkArtikel}
+                    className="flex flex-col justify-between items-stretch col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-6 2xl:col-span-4 bg-gray-100 p-3 rounded-lg h-full"
+                  >
+                    <div className="w-full h-40 rounded-md overflow-hidden">
+                      <img
+                        className="w-full h-full object-cover"
+                        src={data.linkCover}
+                        alt=""
+                      />
+                    </div>
+                    <p className="text-sm md:text-base font-medium mt-2 flex-1">
+                      {data.judulArtikel}
+                    </p>
+                    <p className="bg-blue-500 text-white text-sm md:text-base font-semibold mt-5 p-2 rounded-md text-center">
+                      {data.authorArtikel}
+                    </p>
+                  </a>
+                ))}
               </div>
             </div>
           </div>

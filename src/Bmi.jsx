@@ -54,7 +54,7 @@ const Bmi = () => {
       linkCover:
         "https://cdn.hellosehat.com/wp-content/uploads/2019/11/shutterstock_539919946.jpg?w=750&q=75",
       linkArtikel:
-        "https://hellosehat.com/kebugaran/olahraga-berat-badan-turun/berbagai-olahraga-menurunkan-berat-badan/",
+        "/coverBmi2.webp",
       judulArtikel: "11 Olahraga Rutin untuk Bantu Menurunkan Berat Badan Anda",
       authorArtikel: "Hallo Sehat",
     },
