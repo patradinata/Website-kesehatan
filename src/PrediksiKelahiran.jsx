@@ -169,10 +169,10 @@ const PrediksiKelahiran = () => {
               </ul>
             </form>
             <div>
-              <h2 className="text-xl font-bold">
+              <h2 className="text-lg sm:text-xl font-bold">
                 Pengenalan Usia Janin dan Perkiraan Kelahiran
               </h2>
-              <p className="mt-2">
+              <p className="text-sm sm:text-base mt-2">
                 Usia janin dan perkiraan waktu kelahiran adalah cara untuk
                 mengetahui perkembangan janin dalam kandungan dan menentukan
                 kapan kemungkinan bayi akan lahir. Informasi ini sangat berguna
@@ -181,10 +181,10 @@ const PrediksiKelahiran = () => {
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-bold">
+              <h2 className="text-lg sm:text-xl font-bold">
                 Tabel Usia Janin dan Perkembangan
               </h2>
-              <p className="mt-2">
+              <p className="text-sm sm:text-base mt-2">
                 Ini adalah tabel perkiraan perkembangan janin berdasarkan usia
                 kehamilan dalam minggu:
               </p>
@@ -193,56 +193,56 @@ const PrediksiKelahiran = () => {
                 cellPadding={10}
               >
                 <tr>
-                  <th className="border border-collapse border-black">
+                  <th className="text-sm sm:text-base border border-collapse border-black">
                     Usia Kehamilan (Minggu)
                   </th>
-                  <th className="border border-collapse border-black">
+                  <th className="text-sm sm:text-base border border-collapse border-black">
                     Perkembangan Janin
                   </th>
                 </tr>
                 <tr>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     4–12 minggu
                   </td>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     Pembentukan organ dasar janin
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     13–24 minggu
                   </td>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     Perkembangan tulang dan otot
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     25–36 minggu
                   </td>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     Meningkatnya berat dan panjang janin
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     37–40 minggu
                   </td>
-                  <td className="border border-collapse border-black">
+                  <td className="text-sm sm:text-base border border-collapse border-black">
                     Janin sudah siap dilahirkan
                   </td>
                 </tr>
               </table>
             </div>
             <div>
-              <h2 className="text-xl font-bold">
+              <h2 className="text-lg sm:text-xl font-bold">
                 Risiko Kesehatan Berdasarkan Usia Janin
               </h2>
-              <p className="my-2">
+              <p className="text-sm sm:text-base my-2">
                 Usia kehamilan yang terlalu dini atau terlambat memiliki risiko
                 kesehatan tertentu. Berikut beberapa risiko kesehatan:
               </p>
-              <ul className="list-disc list-inside my-5">
+              <ul className="list-disc list-inside text-sm sm:text-base  my-5">
                 <p className="font-bold">Kelahiran Dini (Prematur)</p>
                 <li>Risiko gangguan pernapasan</li>
                 <li>Sistem kekebalan tubuh yang belum matang</li>
@@ -256,37 +256,39 @@ const PrediksiKelahiran = () => {
               </ul>
             </div>
             <div>
-              <h2 className="text-xl font-bold">
+              <h2 className="text-lg sm:text-xl font-bold">
                 Formula Menghitung Perkiraan Kelahiran
               </h2>
-              <p className="my-2">
+              <p className="text-sm sm:text-base my-2">
                 Perkiraan tanggal kelahiran dapat dihitung dengan rumus sebagai
                 berikut.
               </p>
               <div className="flex flex-col items-start space-y-5 mt-5">
-                <code className="w-full bg-gray-200 p-3 rounded-md">
+                <code className="w-full bg-gray-200 text-sm sm:text-base  p-3 rounded-md">
                   HPHT + 1 tahun = x
                 </code>
-                <code className="w-full bg-gray-200 p-3 rounded-md">
+                <code className="w-full bg-gray-200 text-sm sm:text-base  p-3 rounded-md">
                   x + 7 hari = y
                 </code>
-                <code className="w-full bg-gray-200 p-3 rounded-md">
+                <code className="w-full bg-gray-200 text-sm sm:text-base  p-3 rounded-md">
                   y - 3 bulan = tanggal kelahiran
                 </code>
-                <p className="my-5">Contoh :</p>
-                <code className="w-full bg-gray-200 p-3 rounded-md">
+                <p className="text-sm sm:text-base my-5">Contoh :</p>
+                <code className="w-full bg-gray-200 text-sm sm:text-base  p-3 rounded-md">
                   12 Juni 2024 + 1 tahun = 12 Juni 2025
                 </code>
-                <code className="w-full bg-gray-200 p-3 rounded-md">
+                <code className="w-full bg-gray-200 text-sm sm:text-base  p-3 rounded-md">
                   12 Juni 2025 + 7 hari = 19 Juni 2025
                 </code>
-                <code className="w-full bg-gray-200 p-3 rounded-md">
+                <code className="w-full bg-gray-200 text-sm sm:text-base  p-3 rounded-md">
                   19 Juni 2025 - 3 bulan = 19 Maret 2025
                 </code>
               </div>
             </div>
             <div>
-              <h2 className="text-xl font-bold">Seputar kehamilan</h2>
+              <h2 className="text-lg sm:text-xl font-bold">
+                Seputar kehamilan
+              </h2>
               <div className="mt-2 grid grid-cols-12 gap-5">
                 {artikel.map((data, index) => (
                   <a
