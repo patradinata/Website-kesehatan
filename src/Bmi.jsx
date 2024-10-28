@@ -379,7 +379,7 @@ const Bmi = () => {
           </div>
         </div>
         <footer className="w-full">
-          <p className="text-center">&copy;Joan Orlando Purba | 2024</p>
+          <p className="text-sm sm:text-base text-center">&copy;Joan Orlando Purba | 2024</p>
         </footer>
       </div>
       <ToastContainer />
