@@ -138,11 +138,13 @@ const CardGame = () => {
               Ketentuan Permainan
             </h2>
             <ol className="text-left text-sm sm:text-base list-decimal list-inside text-gray-700 mb-4">
-              <li>Cari 2 buah yang sama!</li>
               <li>
-                Ga ketemu? cari lagi!
+                Cari 2 <b>buah</b> yang sama!
               </li>
-              <li>Cari sampaimendapat 5 pasang buah!</li>
+              <li>Ga ketemu? cari lagi!</li>
+              <li>
+                Cari sampai ketemu 5 pasang <b>buah!</b>
+              </li>
             </ol>
             <button
               onClick={() => setShowInstructions(false)}
