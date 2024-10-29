@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./Home.jsx";
 import Bmi from "./Bmi.jsx";
 import PrediksiKelahiran from "./PrediksiKelahiran.jsx";
+import CardGame from "./CardGame.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/imt",
     element: <Bmi />,
+  },
+  {
+    path: "/cardgame",
+    element: <CardGame />,
   },
   {
     path: "/prediksikelahiran",
