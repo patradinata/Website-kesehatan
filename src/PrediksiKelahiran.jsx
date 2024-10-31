@@ -112,7 +112,7 @@ const PrediksiKelahiran = () => {
       <div className="p-5 flex flex-col gap-y-5">
         <div className="flex">
           <Link
-            className="flex items-center gap-x-1 bg-blue-600 px-5 py-2 rounded-3xl text-white"
+            className="flex items-center gap-x-1 bg-red-600 px-5 py-2 rounded-3xl text-white"
             to="/"
           >
             <p className="text-base sm:text-xl font-semibold">Back</p>
@@ -130,7 +130,7 @@ const PrediksiKelahiran = () => {
                   <label htmlFor="">Masukkan HPHT</label>
                   <DatePicker className="w-full" onChange={handleDatePicker} />
                   <button
-                    className="w-full bg-blue-600 text-white font-medium py-2 rounded-md"
+                    className="w-full bg-red-600 text-white font-medium py-2 rounded-md"
                     type="submit"
                   >
                     submit
@@ -320,7 +320,7 @@ const PrediksiKelahiran = () => {
                     <p className="text-sm md:text-base font-medium mt-2 flex-1">
                       {data.judulArtikel}
                     </p>
-                    <p className="bg-blue-500 text-white text-sm md:text-base font-semibold mt-5 p-2 rounded-md text-center">
+                    <p className="bg-red-500 text-white text-sm md:text-base font-semibold mt-5 p-2 rounded-md text-center">
                       {data.authorArtikel}
                     </p>
                   </a>

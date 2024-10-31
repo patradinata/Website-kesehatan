@@ -16,6 +16,10 @@
   background-image: url("/hamil.jpg");
 }
 
+.backgroundTidur {
+  background-image: url("/tidur.webp");
+}
+
 .card {
   perspective: 1000px;
 }

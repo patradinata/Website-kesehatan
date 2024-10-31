@@ -3,43 +3,7 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Bmi = () => {
-  const [berat, setBerat] = useState();
-  const [tinggi, setTinggi] = useState();
-  const [hasilBmi, setHasilBmi] = useState();
-  const [kategoriBmi, setKategoriBmi] = useState();
-
-  const bmi = (e) => {
-    e.preventDefault();
-
-    if (isNaN(berat) && isNaN(tinggi)) {
-      return toast.error("tolong masukkan angka");
-    }
-
-    let beratAngka = parseFloat(berat);
-    let tinggiAngka = parseFloat(tinggi);
-
-    let result = beratAngka / Math.pow(tinggiAngka / 100, 2);
-    result = parseFloat(result.toFixed(2));
-
-    if (result < 18.5) {
-      setKategoriBmi("kekurangan berat badan 👎");
-    } else if (result >= 18.5 && result < 24.9) {
-      setKategoriBmi("sehat ✨");
-    } else if (result >= 25 && result < 29.9) {
-      setKategoriBmi("kelebihan berat badan 😒");
-    } else {
-      setKategoriBmi("obesitas 😤");
-    }
-
-    setHasilBmi(
-      result.toLocaleString("id-ID", {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      })
-    );
-  };
-
+const KalkulatorBmi = () => {
   const artikel = [
     {
       linkCover:
@@ -78,89 +42,18 @@ const Bmi = () => {
             <p className="text-base sm:text-xl font-semibold">Back</p>
           </Link>
         </div>
-        <div className="h-0 lg:h-[400px] backgroundPinggang bg-no-repeat bg-cover bg-center flex justify-center items-center"></div>
+        <div className="h-0 lg:h-[400px] backgroundTidur bg-no-repeat bg-cover bg-center flex justify-center items-center"></div>
         <div className="space-y-10">
           <h1 className="text-xl lg:text-3xl font-extrabold text-center">
-            BMI (Body mass index)
+            Kalkulator Siklus Tidur
           </h1>
-          <form onSubmit={bmi}>
+          <form>
             <ul className="grid grid-cols-12 gap-5 justify-center">
-              <li className="col-span-12 sm:col-span-6 lg:col-start-4 lg:col-span-3 xl:col-start-5 xl:col-span-2">
-                <input
-                  onChange={(e) => setBerat(e.target.value)}
-                  className="w-full border border-transparent bg-gray-100 focus:bg-gray-200 outline-none rounded-md p-2"
-                  type="text"
-                  placeholder="berat (kg)"
-                  required
-                />
-              </li>
-              <li className="col-span-12 sm:col-span-6 lg:col-span-3 xl:col-span-2">
-                <input
-                  onChange={(e) => setTinggi(e.target.value)}
-                  className="w-full border border-transparent bg-gray-100 focus:bg-gray-200 outline-none rounded-md p-2"
-                  type="text"
-                  placeholder="tinggi (cm)"
-                  required
-                />
-              </li>
-              <li className="col-span-12 lg:col-start-4 lg:col-end-10 xl:col-start-5 xl:col-end-9">
-                <button
-                  type="submit"
-                  className="w-full text-lg font-semibold bg-red-500 text-white rounded-md py-2"
-                >
-                  Lihat hasil
-                </button>
-              </li>
-              <li className="col-span-12 lg:col-start-4 lg:col-end-10 xl:col-start-5 xl:col-end-9 flex flex-col items-center gap-y-5">
-                {hasilBmi ? (
-                  <>
-                    <p className="font-semibold">BMI kamu adalah</p>
-                    <p className="text-5xl font-bold">{hasilBmi}</p>
-                    <p>
-                      kamu <b>{kategoriBmi}</b>
-                    </p>
-                  </>
-                ) : (
-                  ""
-                )}
-                <div className="w-full flex">
-                  <div className="w-full flex flex-col items-center">
-                    <div className="w-full h-2 bg-yellow-500"></div>
-                    <p className="font-semibold mt-2 text-[11px] sm:text-md md:text-base">
-                      UNDERWEIGHT
-                    </p>
-                    <p className="font-semibold mt-2 text-[11px] sm:text-md md:text-base">
-                      {"<"} 18,5
-                    </p>
-                  </div>
-                  <div className="w-auto sm:w-full flex flex-col items-center">
-                    <div className="w-[80px] sm:w-full h-2 bg-green-500"></div>
-                    <p className="font-semibold mt-2 text-[11px] sm:text-md md:text-base">
-                      NORMAL
-                    </p>
-                    <p className="font-semibold mt-2 text-[11px] sm:text-md md:text-base">
-                      18,5 - 25
-                    </p>
-                  </div>
-                  <div className="w-full flex flex-col items-center">
-                    <div className="w-full h-2 bg-orange-500"></div>
-                    <p className="font-semibold mt-2 text-[11px] sm:text-md md:text-base">
-                      OVERWEIGHT
-                    </p>
-                    <p className="font-semibold mt-2 text-[11px] sm:text-md md:text-base">
-                      25 - 30
-                    </p>
-                  </div>
-                  <div className="w-auto sm:w-full flex flex-col items-center">
-                    <div className="w-[70px] sm:w-full h-2 bg-red-500"></div>
-                    <p className="font-semibold mt-2 text-[11px] sm:text-md md:text-base">
-                      OBESE
-                    </p>
-                    <p className="font-semibold mt-2 text-[11px] sm:text-md md:text-base">
-                      {">"} 30
-                    </p>
-                  </div>
-                </div>
+              <li>
+                <select className="px-5 py-3" name="" id="">
+                  <option className="bg-red-500 py-5" value="">1</option>
+                  <option className="bg-red-500 py-5" value="">2</option>
+                </select>
               </li>
             </ul>
           </form>
@@ -387,4 +280,4 @@ const Bmi = () => {
   );
 };
 
-export default Bmi;
+export default KalkulatorBmi;

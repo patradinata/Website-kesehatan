@@ -2,8 +2,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./Home.jsx";
-import Bmi from "./Bmi.jsx";
+import KalkulatorBmi from "./KalkulatorBmi.jsx";
 import PrediksiKelahiran from "./PrediksiKelahiran.jsx";
+import KalkulatorSiklusTidur from "./KalkulatorSiklusTidur.jsx";
 import CardGame from "./CardGame.jsx";
 
 const router = createBrowserRouter([
@@ -12,8 +13,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/imt",
-    element: <Bmi />,
+    path: "/kalkulatorbmi",
+    element: <KalkulatorBmi />,
   },
   {
     path: "/cardgame",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/prediksikelahiran",
     element: <PrediksiKelahiran />,
+  },
+  {
+    path: "/kalkulatorsiklustidur",
+    element: <KalkulatorSiklusTidur />,
   },
 ]);
 
