@@ -4,6 +4,49 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const KalkulatorBmi = () => {
+  const [submited, setSubmited] = useState(false);
+  const [jam, getJam] = useState("");
+  const [menit, getMenit] = useState("");
+  const [results, setResults] = useState([]);
+
+  const getWaktu = (e) => {
+    e.preventDefault();
+
+    if (jam === "" || menit === "") {
+      setSubmited(false);
+      return toast.error("Pilih jam dan menit!");
+    } else {
+      setSubmited(true);
+
+      const totalMenitBangun = parseInt(jam) * 60 + parseInt(menit);
+
+      const durasiSiklus = {
+        6: 540,
+        5: 450,
+        4: 360,
+        3: 270,
+      };
+
+      const newResults = [];
+
+      [6, 5, 4, 3].forEach((siklus) => {
+        const waktuTidur =
+          (totalMenitBangun - durasiSiklus[siklus] + 1440) % 1440;
+        const jamTidur = Math.floor(waktuTidur / 60);
+        const menitTidur = waktuTidur % 60;
+
+        newResults.push({
+          siklus,
+          jamTidur,
+          menitTidur,
+          durasi: durasiSiklus[siklus] / 60,
+        });
+      });
+
+      setResults(newResults);
+    }
+  };
+
   const artikel = [
     {
       linkCover:
@@ -47,16 +90,178 @@ const KalkulatorBmi = () => {
           <h1 className="text-xl lg:text-3xl font-extrabold text-center">
             Kalkulator Siklus Tidur
           </h1>
-          <form>
-            <ul className="grid grid-cols-12 gap-5 justify-center">
-              <li>
-                <select className="px-5 py-3" name="" id="">
-                  <option className="bg-red-500 py-5" value="">1</option>
-                  <option className="bg-red-500 py-5" value="">2</option>
-                </select>
-              </li>
-            </ul>
-          </form>
+          <div className="px-0 lg:px-60 xl:px-96 space-y-10">
+            <form
+              className="flex justify-between items-end"
+              onSubmit={getWaktu}
+            >
+              <ul className="flex items-end gap-5">
+                <li>
+                  <select
+                    onChange={(e) => getJam(e.target.value)}
+                    className="bg-gray-100 outline-none rounded-md px-5 py-3"
+                    name=""
+                    id=""
+                  >
+                    <option className="py-5" value={false} selected disabled>
+                      Jam
+                    </option>
+                    <option className="py-5" value="1">
+                      01
+                    </option>
+                    <option className="py-5" value="2">
+                      02
+                    </option>
+                    <option className="py-5" value="3">
+                      03
+                    </option>
+                    <option className="py-5" value="4">
+                      04
+                    </option>
+                    <option className="py-5" value="5">
+                      05
+                    </option>
+                    <option className="py-5" value="6">
+                      06
+                    </option>
+                    <option className="py-5" value="7">
+                      07
+                    </option>
+                    <option className="py-5" value="8">
+                      08
+                    </option>
+                    <option className="py-5" value="9">
+                      09
+                    </option>
+                    <option className="py-5" value="10">
+                      10
+                    </option>
+                    <option className="py-5" value="11">
+                      11
+                    </option>
+                    <option className="py-5" value="12">
+                      12
+                    </option>
+                    <option className="py-5" value="13">
+                      13
+                    </option>
+                    <option className="py-5" value="14">
+                      14
+                    </option>
+                    <option className="py-5" value="15">
+                      15
+                    </option>
+                    <option className="py-5" value="16">
+                      16
+                    </option>
+                    <option className="py-5" value="17">
+                      17
+                    </option>
+                    <option className="py-5" value="18">
+                      18
+                    </option>
+                    <option className="py-5" value="19">
+                      19
+                    </option>
+                    <option className="py-5" value="20">
+                      20
+                    </option>
+                    <option className="py-5" value="21">
+                      21
+                    </option>
+                    <option className="py-5" value="22">
+                      22
+                    </option>
+                    <option className="py-5" value="23">
+                      23
+                    </option>
+                    <option className="py-5" value="24">
+                      24
+                    </option>
+                  </select>
+                </li>
+                <li>
+                  <select
+                    onChange={(e) => getMenit(e.target.value)}
+                    className="bg-gray-100 outline-none rounded-md px-5 py-3"
+                    name=""
+                    id=""
+                  >
+                    <option className="py-5" value="false">
+                      Menit
+                    </option>
+                    <option className="py-5" value="0">
+                      00
+                    </option>
+                    <option className="py-5" value="5">
+                      05
+                    </option>
+                    <option className="py-5" value="10">
+                      10
+                    </option>
+                    <option className="py-5" value="15">
+                      15
+                    </option>
+                    <option className="py-5" value="20">
+                      20
+                    </option>
+                    <option className="py-5" value="25">
+                      25
+                    </option>
+                    <option className="py-5" value="30">
+                      30
+                    </option>
+                    <option className="py-5" value="35">
+                      35
+                    </option>
+                    <option className="py-5" value="40">
+                      40
+                    </option>
+                    <option className="py-5" value="45">
+                      45
+                    </option>
+                    <option className="py-5" value="50">
+                      50
+                    </option>
+                    <option className="py-5" value="55">
+                      55
+                    </option>
+                  </select>
+                </li>
+                <li className="flex justify-center">
+                  <button
+                    type="submit"
+                    className="bg-red-500 text-white font-semibold w-full p-3 rounded-md"
+                  >
+                    Cek siklus tidur
+                  </button>
+                </li>
+              </ul>
+              {submited && (
+                <ul className="space-y-5">
+                  {results.map((result, index) => (
+                    <li
+                      key={index}
+                      className={`w-72 bg-red-${
+                        500 + index * 100
+                      } text-white rounded-md p-3`}
+                    >
+                      <div className="flex justify-between">
+                        <p className="text-lg font-bold">
+                          {result.jamTidur}:{result.menitTidur < 10 ? "0" : ""}
+                          {result.menitTidur}
+                        </p>
+                        <p className="text-lg font-bold">Disarankan</p>
+                      </div>
+                      <p className="mt-3">
+                        {result.durasi} jam tidur, {result.siklus} siklus tidur
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </form>
+          </div>
           <div className="px-0 lg:px-60 xl:px-96 space-y-10">
             <div>
               <h2 className="text-lg sm:text-xl font-bold">Pengenalan BMI</h2>
@@ -272,7 +477,9 @@ const KalkulatorBmi = () => {
           </div>
         </div>
         <footer className="w-full">
-          <p className="text-sm sm:text-base text-center">&copy;Joan Orlando Purba | 2024</p>
+          <p className="text-sm sm:text-base text-center">
+            &copy;Joan Orlando Purba | 2024
+          </p>
         </footer>
       </div>
       <ToastContainer />
