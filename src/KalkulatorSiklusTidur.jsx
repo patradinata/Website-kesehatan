@@ -134,7 +134,7 @@ const KalkulatorBmi = () => {
                 <li className="w-[120px] sm:w-full xl:w-[100px]">
                   <select
                     onChange={(e) => getJam(e.target.value)}
-                    className="bg-gray-100 outline-none rounded-md w-full py-3"
+                    className="bg-gray-100 outline-none rounded-md w-full text-sm py-3"
                     name=""
                     id=""
                   >
@@ -218,7 +218,7 @@ const KalkulatorBmi = () => {
                 <li className="w-[120px] sm:w-full xl:w-[100px]">
                   <select
                     onChange={(e) => getMenit(e.target.value)}
-                    className="bg-gray-100 outline-none rounded-md w-full py-3"
+                    className="bg-gray-100 outline-none rounded-md w-full text-sm py-3"
                     name=""
                     id=""
                   >
@@ -266,7 +266,7 @@ const KalkulatorBmi = () => {
                 <li className="flex w-full xl:w-[150px] justify-center">
                   <button
                     type="submit"
-                    className="bg-red-500 text-white font-semibold w-full p-3 rounded-md"
+                    className="bg-red-500 text-white font-semibold w-full text-sm p-3 rounded-md"
                   >
                     Cek siklus tidur
                   </button>
@@ -277,9 +277,7 @@ const KalkulatorBmi = () => {
                   {results.map((result, index) => (
                     <li
                       key={index}
-                      className={`w-full bg-red-${
-                        500 + index * 100
-                      } text-white rounded-md p-3`}
+                      className={`w-full bg-red-500 text-white rounded-md p-3`}
                     >
                       <div className="flex justify-between">
                         <p className="text-lg font-bold">
