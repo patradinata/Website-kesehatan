@@ -280,12 +280,12 @@ const KalkulatorBmi = () => {
                       className={`w-full bg-red-500 text-white rounded-md p-3`}
                     >
                       <div className="flex justify-between">
-                        <p className="text-lg font-bold">
+                        <p className="text-sm md:text-lg font-bold">
                           {result.jamTidur}:{result.menitTidur < 10 ? "0" : ""}
                           {result.menitTidur}
                         </p>
                       </div>
-                      <p className="mt-3">
+                      <p className="text-sm md:text-base mt-3">
                         {result.durasi} jam tidur, {result.siklus} siklus tidur
                       </p>
                     </li>
