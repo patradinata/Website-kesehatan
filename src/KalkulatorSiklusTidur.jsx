@@ -50,27 +50,62 @@ const KalkulatorBmi = () => {
   const artikel = [
     {
       linkCover:
-        "https://mysiloam-api.siloamhospitals.com/public-asset/website-cms/website-cms-16923398009235125.webp",
-      linkArtikel:
-        "https://www.siloamhospitals.com/informasi-siloam/artikel/diet-untuk-menurunkan-berat-badan",
+        "https://ciputrahospital.com/wp-content/uploads/2024/09/man-sleeping-bed-morning-2-1-1024x683.jpg",
+      linkArtikel: "https://ciputrahospital.com/cara-agar-cepat-tidur/",
       judulArtikel:
-        "10 Tips Diet untuk Menurunkan Berat Badan yang Aman & Sehat",
-      authorArtikel: "Siloam hospitals",
+        "11 Cara Ampuh Tidur Cepat dan Nyenyak untuk Atasi Insomnia",
+      authorArtikel: "Ciputra hospitals",
     },
     {
-      linkCover: "/coverBmi2.webp",
+      linkCover:
+        "https://cdn.hellosehat.com/wp-content/uploads/2018/12/Manfaat-Kesehatan-dan-Risiko-Tidur-di-Lantai.jpg?w=750&q=75",
       linkArtikel:
-        "https://hellosehat.com/kebugaran/olahraga-berat-badan-turun/berbagai-olahraga-menurunkan-berat-badan/",
-      judulArtikel: "11 Olahraga Rutin untuk Bantu Menurunkan Berat Badan Anda",
+        "https://hellosehat.com/sehat/informasi-kesehatan/manfaat-dan-risiko-tidur-di-lantai/",
+      judulArtikel:
+        "Tidur di Lantai Sebetulnya Baik Atau Buruk Buat Kesehatan?",
       authorArtikel: "Hallo Sehat",
     },
     {
       linkCover:
-        "https://www.prudential.co.id/export/sites/prudential-id/id/.galleries/images/page-title/diet-1366x560.jpg",
+        "https://thumb.viva.co.id/media/frontend/thumbs3/2020/03/25/5e7a4ac4a2461-dokter-tirta-mandira_1265_711.jpg",
       linkArtikel:
-        "https://www.prudential.co.id/id/pulse/article/8-rekomendasi-makanan-untuk-diet-yang-patut-dicoba/",
-      judulArtikel: "8 Rekomendasi Makanan untuk Diet yang Patut Dicoba",
-      authorArtikel: "Prudential",
+        "https://www.viva.co.id/digital/digilife/1719798-dokter-tirta-jelaskan-pentingnya-tidur-malam-dan-batasi-begadang",
+      judulArtikel:
+        "Dokter Tirta Jelaskan Pentingnya Tidur Malam dan Batasi Begadang",
+      authorArtikel: "Viva",
+    },
+  ];
+
+  const tableJamTidur = [
+    {
+      kategori: "Bayi",
+      rentangUsia: "4–12 bulan",
+      rekomendasi: "12-16 jam (termasuk tidur siang)",
+    },
+    {
+      kategori: "Balita",
+      rentangUsia: "1–2 tahun",
+      rekomendasi: "11-14 jam (termasuk tidur siang)",
+    },
+    {
+      kategori: "Prasekolah",
+      rentangUsia: "3–5 tahun",
+      rekomendasi: "10-13 jam (termasuk tidur siang)",
+    },
+    {
+      kategori: "Pelajar",
+      rentangUsia: "6–12 tahun",
+      rekomendasi: "9-12 jam",
+    },
+    {
+      kategori: "Remaja",
+      rentangUsia: "13–18 tahun",
+      rekomendasi: "8-10 jam",
+    },
+    {
+      kategori: "Dewasa",
+      rentangUsia: "18 tahun keatas",
+      rekomendasi: "7 jam atau lebih",
     },
   ];
 
@@ -92,14 +127,14 @@ const KalkulatorBmi = () => {
           </h1>
           <div className="px-0 lg:px-60 xl:px-96 space-y-10">
             <form
-              className="flex justify-between items-end"
+              className="flex flex-col 2xl:flex-row justify-between items-end"
               onSubmit={getWaktu}
             >
-              <ul className="flex items-end gap-5">
-                <li>
+              <ul className="w-full flex items-end gap-3">
+                <li className="w-[120px] sm:w-full xl:w-[100px]">
                   <select
                     onChange={(e) => getJam(e.target.value)}
-                    className="bg-gray-100 outline-none rounded-md px-5 py-3"
+                    className="bg-gray-100 outline-none rounded-md w-full py-3"
                     name=""
                     id=""
                   >
@@ -180,10 +215,10 @@ const KalkulatorBmi = () => {
                     </option>
                   </select>
                 </li>
-                <li>
+                <li className="w-[120px] sm:w-full xl:w-[100px]">
                   <select
                     onChange={(e) => getMenit(e.target.value)}
-                    className="bg-gray-100 outline-none rounded-md px-5 py-3"
+                    className="bg-gray-100 outline-none rounded-md w-full py-3"
                     name=""
                     id=""
                   >
@@ -228,7 +263,7 @@ const KalkulatorBmi = () => {
                     </option>
                   </select>
                 </li>
-                <li className="flex justify-center">
+                <li className="flex w-full xl:w-[150px] justify-center">
                   <button
                     type="submit"
                     className="bg-red-500 text-white font-semibold w-full p-3 rounded-md"
@@ -238,11 +273,11 @@ const KalkulatorBmi = () => {
                 </li>
               </ul>
               {submited && (
-                <ul className="space-y-5">
+                <ul className="w-full 2xl:w-96 space-y-5 mt-5 2xl:mt-0">
                   {results.map((result, index) => (
                     <li
                       key={index}
-                      className={`w-72 bg-red-${
+                      className={`w-full bg-red-${
                         500 + index * 100
                       } text-white rounded-md p-3`}
                     >
@@ -251,7 +286,6 @@ const KalkulatorBmi = () => {
                           {result.jamTidur}:{result.menitTidur < 10 ? "0" : ""}
                           {result.menitTidur}
                         </p>
-                        <p className="text-lg font-bold">Disarankan</p>
                       </div>
                       <p className="mt-3">
                         {result.durasi} jam tidur, {result.siklus} siklus tidur
@@ -264,22 +298,26 @@ const KalkulatorBmi = () => {
           </div>
           <div className="px-0 lg:px-60 xl:px-96 space-y-10">
             <div>
-              <h2 className="text-lg sm:text-xl font-bold">Pengenalan BMI</h2>
+              <h2 className="text-lg sm:text-xl font-bold">
+                Pengenalan kalkulator siklus tidur
+              </h2>
               <p className="text-sm sm:text-base mt-2">
-                BMI (Body Mass Index) atau Indeks Massa Tubuh adalah ukuran yang
-                digunakan untuk menilai apakah berat badan seseorang
-                proporsional dengan tinggi badannya. BMI digunakan sebagai
-                indikator apakah seseorang berada dalam kategori berat badan
-                yang sehat, kekurangan berat badan, kelebihan berat badan, atau
-                obesitas.
+                Kalkulator siklus tidur adalah alat yang dirancang untuk
+                membantu menghitung dan memantau pola tidur seseorang. Alat ini
+                biasanya berfungsi dengan mengumpulkan informasi dari pengguna
+                mengenai waktu tidur mereka, lalu menggunakan algoritma untuk
+                menganalisis data tersebut dan memberikan informasi mengenai
+                siklus tidur pengguna.
               </p>
             </div>
             <div>
-              <h2 className="text-lg sm:text-xl font-bold">Tabel BMI</h2>
+              <h2 className="text-lg sm:text-xl font-bold">Tabel jam tidur</h2>
               <p className="text-sm sm:text-base mt-2">
-                Ini adalah berat badan yang direkomendasikan Organisasi
-                Kesehatan Dunia (WHO) berdasarkan nilai BMI. Ini digunakan untuk
-                pria dan wanita.
+                Sebagian orang tidak menyadari jumlah tidur yang mereka
+                butuhkan, meskipun kebanyakan orang dewasa dianjurkan tidur
+                tujuh hingga sembilan jam per malam, dengan kebutuhan lebih
+                tinggi untuk bayi, anak-anak, dan remaja; jumlah tidur yang
+                optimal dapat bervariasi tergantung kondisi kesehatan individu.
               </p>
               <table
                 className="border border-collapse border-black mt-10"
@@ -287,168 +325,49 @@ const KalkulatorBmi = () => {
               >
                 <tr>
                   <th className="text-sm sm:text-base border border-collapse border-black">
-                    BMI
+                    Kategori
                   </th>
                   <th className="text-sm sm:text-base border border-collapse border-black">
-                    Klasifikasi
+                    Rentang usia
+                  </th>
+                  <th className="text-sm sm:text-base border border-collapse border-black">
+                    Rekomendasi tidur harian
                   </th>
                 </tr>
-                <tr>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    {"<"} 18,5
-                  </td>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    Underweight
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    18,5 - 24,9
-                  </td>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    Normal
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    25 - 29,9
-                  </td>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    Overweight
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    30 - 25
-                  </td>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    Obesitas kelas I
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    35 - 40
-                  </td>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    Obesitas kelas II
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    {">"} 40
-                  </td>
-                  <td className="text-sm sm:text-base border border-collapse border-black">
-                    Obesitas kelas III
-                  </td>
-                </tr>
+                {tableJamTidur.map((dataJamTidur, index) => (
+                  <tr key={index}>
+                    <td className="text-sm sm:text-base border border-collapse border-black">
+                      {dataJamTidur.kategori}
+                    </td>
+                    <td className="text-sm sm:text-base border border-collapse border-black">
+                      {dataJamTidur.rentangUsia}
+                    </td>
+                    <td className="text-sm sm:text-base border border-collapse border-black">
+                      {dataJamTidur.rekomendasi}
+                    </td>
+                  </tr>
+                ))}
               </table>
             </div>
             <div>
-              <h2 className="text-lg sm:text-xl font-bold">Grafik </h2>
-              <p className="text-sm sm:text-base mt-2">
-                Ini adalah grafik kategori BMI berdasarkan data Organisasi
-                Kesehatan Dunia. Garis putus-putus mewakili subdivisi dalam
-                kategorisasi utama.
-              </p>
-              <img src="/grafikBmi.svg" alt="" />
-            </div>
-            <div>
               <h2 className="text-lg sm:text-xl font-bold">
-                Resiko overweight
+                Cara Meningkatkan Tidur
               </h2>
               <p className="text-sm sm:text-base my-2">
-                Kelebihan berat badan meningkatkan risiko sejumlah penyakit dan
-                kondisi kesehatan serius. Di bawah ini adalah daftar risiko
-                tersebut:
+                Sejumlah perubahan gaya hidup sederhana dapat diterapkan untuk
+                meningkatkan kualitas tidur, yang dapat menghasilkan kesehatan
+                fisik, kognitif, dan emosional yang lebih baik.
               </p>
               <ul className="text-sm sm:text-base list-disc list-inside">
-                <li>Hipertensi (Tekanan Darah Tinggi)</li>
-                <li>Kolesterol Tinggi</li>
-                <li>Gangguan Pernapasan (Asma dan Sesak Napas)</li>
-                <li>Penyakit Ginjal Kronis</li>
-                <li>Masalah Sendi dan Tulang (Osteoarthritis)</li>
+                <li>Hindari kafein</li>
+                <li>Kurangi konsumsi alkohol sebelum tidur</li>
+                <li>Singkirkan perangkat elektronik</li>
+                <li>Berolahraga setiap hari</li>
+                <li>Jadikan kamar tidur gelap dan tenang</li>
               </ul>
             </div>
             <div>
-              <h2 className="text-lg sm:text-xl font-bold">
-                Resiko underweight
-              </h2>
-              <p className="text-sm sm:text-base my-2">
-                Kekurangan berat badan mempunyai risiko tersendiri, seperti yang
-                tercantum di bawah ini:
-              </p>
-              <ul className="text-sm sm:text-base list-disc list-inside">
-                <li>Sistem Kekebalan Tubuh yang Lemah</li>
-                <li>Kerapuhan Tulang (Osteoporosis)</li>
-                <li>Kehilangan Massa Otot</li>
-                <li>Anemia</li>
-                <li>Gangguan Pertumbuhan pada Anak dan Remaja</li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="text-lg sm:text-xl font-bold">Formula BMI</h2>
-              <p className="text-sm sm:text-base my-2">
-                Di bawah ini rumus yang digunakan untuk menghitung BMI dalam
-                Sistem Satuan Internasional (SI)
-              </p>
-              <div className="my-10">
-                <td>
-                  <table cellSpacing="0" cellPadding="0">
-                    <tbody>
-                      <tr>
-                        <td>BMI=</td>
-                        <td>
-                          <table cellSpacing="" cellPadding="0">
-                            <tbody>
-                              <tr>
-                                <td className="text-center">berat (kg)</td>
-                              </tr>
-                              <tr>
-                                <td
-                                  className="bg-black"
-                                  width="100"
-                                  height="1"
-                                ></td>
-                              </tr>
-                              <tr>
-                                <td className="text-center">
-                                  tinggi<sup>2</sup> (m)
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                        <td>&nbsp;=</td>
-                        <td>
-                          <table cellSpacing="0" cellPadding="0">
-                            <tbody>
-                              <tr>
-                                <td className="text-center">70</td>
-                              </tr>
-                              <tr>
-                                <td
-                                  className="bg-black"
-                                  width="50"
-                                  height="1"
-                                ></td>
-                              </tr>
-                              <tr>
-                                <td className="text-center">
-                                  1.72<sup>2</sup>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                        <td>&nbsp;= 23.66</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-lg sm:text-xl font-bold">Seputar BMI</h2>
+              <h2 className="text-lg sm:text-xl font-bold">Seputar tidur</h2>
               <div className="mt-2 grid grid-cols-12 gap-5">
                 {artikel.map((data, index) => (
                   <a
