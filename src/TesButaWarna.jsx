@@ -5,6 +5,35 @@ const TesButaWarna = () => {
   const [posisiGambar, setPosisiGambar] = useState(0);
   const [hasil, setHasil] = useState(false);
 
+  const artikel = [
+    {
+      linkCover:
+        "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/06/12042347/Buta-Warna-1.jpg.webp",
+      linkArtikel:
+        "https://www.halodoc.com/kesehatan/buta-warna?srsltid=AfmBOoqi-zxz-EifF2KEJyuSNE3VI5pObZXRLhl52oR09PUU8-7Ey1WJ",
+      judulArtikel: "Buta Warna",
+      authorArtikel: "Halodoc",
+    },
+    {
+      linkCover:
+        "https://cdn.hellosehat.com/wp-content/uploads/2018/12/Manfaat-Kesehatan-dan-Risiko-Tidur-di-Lantai.jpg?w=750&q=75",
+      linkArtikel:
+        "https://hellosehat.com/sehat/informasi-kesehatan/manfaat-dan-risiko-tidur-di-lantai/",
+      judulArtikel:
+        "Tidur di Lantai Sebetulnya Baik Atau Buruk Buat Kesehatan?",
+      authorArtikel: "Hallo Sehat",
+    },
+    {
+      linkCover:
+        "https://thumb.viva.co.id/media/frontend/thumbs3/2020/03/25/5e7a4ac4a2461-dokter-tirta-mandira_1265_711.jpg",
+      linkArtikel:
+        "https://www.viva.co.id/digital/digilife/1719798-dokter-tirta-jelaskan-pentingnya-tidur-malam-dan-batasi-begadang",
+      judulArtikel:
+        "Dokter Tirta Jelaskan Pentingnya Tidur Malam dan Batasi Begadang",
+      authorArtikel: "Viva",
+    },
+  ];
+
   const gambar = [
     {
       data: [
@@ -74,7 +103,7 @@ const TesButaWarna = () => {
         "https://app.honestdocs.id/calculators/color-blind-quiz/images/plate-15.png",
         ["Tidak ada", 45],
         [
-          "Buta warna total tidak melihat apapun.",
+          "Mata normal dan buta tidak melihat angka apapun.",
           "Buta warna hijau merah melihat angka 45.",
         ],
       ],
@@ -101,45 +130,19 @@ const TesButaWarna = () => {
 
   const tampilkanHasil = (e) => {
     e.preventDefault();
-
     setHasil(true);
   };
 
   const gambarSelanjutnya = (e) => {
     e.preventDefault();
-
     setHasil(false);
-    setPosisiGambar((prevPosisi) => prevPosisi + 1);
-  };
 
-  const artikel = [
-    {
-      linkCover:
-        "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/06/12042347/Buta-Warna-1.jpg.webp",
-      linkArtikel:
-        "https://www.halodoc.com/kesehatan/buta-warna?srsltid=AfmBOoqi-zxz-EifF2KEJyuSNE3VI5pObZXRLhl52oR09PUU8-7Ey1WJ",
-      judulArtikel: "Buta Warna",
-      authorArtikel: "Halodoc",
-    },
-    {
-      linkCover:
-        "https://cdn.hellosehat.com/wp-content/uploads/2018/12/Manfaat-Kesehatan-dan-Risiko-Tidur-di-Lantai.jpg?w=750&q=75",
-      linkArtikel:
-        "https://hellosehat.com/sehat/informasi-kesehatan/manfaat-dan-risiko-tidur-di-lantai/",
-      judulArtikel:
-        "Tidur di Lantai Sebetulnya Baik Atau Buruk Buat Kesehatan?",
-      authorArtikel: "Hallo Sehat",
-    },
-    {
-      linkCover:
-        "https://thumb.viva.co.id/media/frontend/thumbs3/2020/03/25/5e7a4ac4a2461-dokter-tirta-mandira_1265_711.jpg",
-      linkArtikel:
-        "https://www.viva.co.id/digital/digilife/1719798-dokter-tirta-jelaskan-pentingnya-tidur-malam-dan-batasi-begadang",
-      judulArtikel:
-        "Dokter Tirta Jelaskan Pentingnya Tidur Malam dan Batasi Begadang",
-      authorArtikel: "Viva",
-    },
-  ];
+    if (gambar[posisiGambar].data[1][0] === 12) {
+      setPosisiGambar(0);
+    } else {
+      setPosisiGambar((prevPosisi) => prevPosisi + 1);
+    }
+  };
 
   return (
     <>
@@ -165,49 +168,42 @@ const TesButaWarna = () => {
               <img
                 className="w-full col-start-3 col-span-8 sm:col-start-4 sm:col-span-6 xl:col-span-5 2xl:col-span-4"
                 src={gambar[posisiGambar].data[0]}
+                alt="Color Blindness Test Plate"
               />
               {hasil ? (
                 <div className="xl:col-start-7 col-span-12 space-y-5">
                   <h1 className="text-base md:text-xl font-bold">Hasil</h1>
-                  <>
-                    {gambar[posisiGambar].data[2].map((datu, index) => (
-                      <button
-                        onClick={tampilkanHasil}
-                        key={index}
-                        className="w-full text-center bg-gray-100 font-bold p-2 rounded-md"
-                      >
-                        {datu}
-                      </button>
-                    ))}
+                  {gambar[posisiGambar].data[2].map((datu, index) => (
                     <button
-                      onClick={
-                        gambar[posisiGambar].data[1][0] == 12
-                          ? location.reload("/tesbutawarna")
-                          : gambarSelanjutnya
-                      }
-                      className="w-full bg-red-500 text-white text-sm sm:text-base font-bold p-2 rounded-md"
+                      onClick={tampilkanHasil}
+                      key={index}
+                      className="w-full text-center bg-gray-100 font-bold p-2 rounded-md"
                     >
-                      {gambar[posisiGambar].data[1][0] == 12
-                        ? "Ulang?"
-                        : "Gambar selanjutnya"}
+                      {datu}
                     </button>
-                  </>
+                  ))}
+                  <button
+                    onClick={gambarSelanjutnya}
+                    className="w-full bg-red-500 text-white text-sm sm:text-base font-bold p-2 rounded-md"
+                  >
+                    {gambar[posisiGambar].data[1][0] === 12
+                      ? "Ulang?"
+                      : "Gambar selanjutnya"}
+                  </button>
                 </div>
               ) : (
-                <>
-                  <div className="xl:col-start-7 2xl:col-start-8 col-span-12 space-y-5">
-                    <h1 className="text-xl font-bold">Apa yang kamu lihat?</h1>
-                    {gambar[posisiGambar].data[1].map((datu, index) => (
-                      <button
-                        onClick={tampilkanHasil}
-                        key={index}
-                        className="w-full text-center bg-gray-100 text-sm sm:text-base font-bold py-3 rounded-md"
-                      >
-                        {datu}
-                      </button>
-                    ))}
-                  </div>
-                </>
+                <div className="xl:col-start-7 2xl:col-start-8 col-span-12 space-y-5">
+                  <h1 className="text-xl font-bold">Apa yang kamu lihat?</h1>
+                  {gambar[posisiGambar].data[1].map((datu, index) => (
+                    <button
+                      onClick={tampilkanHasil}
+                      key={index}
+                      className="w-full text-center bg-gray-100 text-sm sm:text-base font-bold py-3 rounded-md"
+                    >
+                      {datu}
+                    </button>
+                  ))}
+                </div>
               )}
             </form>
           </div>
