@@ -6,6 +6,7 @@ import KalkulatorBmi from "./KalkulatorBmi.jsx";
 import PrediksiKelahiran from "./PrediksiKelahiran.jsx";
 import KalkulatorSiklusTidur from "./KalkulatorSiklusTidur.jsx";
 import CardGame from "./CardGame.jsx";
+import TesButaWarna from "./TesButaWarna.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/kalkulatorsiklustidur",
     element: <KalkulatorSiklusTidur />,
+  },
+  {
+    path: "/tesbutawarna",
+    element: <TesButaWarna />,
   },
 ]);
 

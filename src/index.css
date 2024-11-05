@@ -20,6 +20,10 @@
   background-image: url("/tidur.webp");
 }
 
+.backgroundMata {
+  background-image: url("/mata.jpg");
+}
+
 .card {
   perspective: 1000px;
 }
