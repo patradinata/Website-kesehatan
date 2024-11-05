@@ -94,9 +94,7 @@ const TesButaWarna = () => {
       data: [
         "https://app.honestdocs.id/calculators/color-blind-quiz/images/plate-1.png",
         [12, "Tidak ada"],
-        [
-          "Semua orang melihat angka 12, jika tidak, dia berbohong!",
-        ],
+        ["Semua orang melihat angka 12, jika tidak, dia berbohong!"],
       ],
     },
   ];
@@ -117,11 +115,11 @@ const TesButaWarna = () => {
   const artikel = [
     {
       linkCover:
-        "https://ciputrahospital.com/wp-content/uploads/2024/09/man-sleeping-bed-morning-2-1-1024x683.jpg",
-      linkArtikel: "https://ciputrahospital.com/cara-agar-cepat-tidur/",
-      judulArtikel:
-        "11 Cara Ampuh Tidur Cepat dan Nyenyak untuk Atasi Insomnia",
-      authorArtikel: "Ciputra hospitals",
+        "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/06/12042347/Buta-Warna-1.jpg.webp",
+      linkArtikel:
+        "https://www.halodoc.com/kesehatan/buta-warna?srsltid=AfmBOoqi-zxz-EifF2KEJyuSNE3VI5pObZXRLhl52oR09PUU8-7Ey1WJ",
+      judulArtikel: "Buta Warna",
+      authorArtikel: "Halodoc",
     },
     {
       linkCover:
@@ -164,37 +162,46 @@ const TesButaWarna = () => {
               onSubmit={tampilkanHasil}
               className="grid grid-cols-12 items-center"
             >
-              <img className="col-span-4" src={gambar[posisiGambar].data[0]} />
+              <img
+                className="w-full col-start-3 col-span-8 sm:col-start-4 sm:col-span-6 xl:col-span-5 2xl:col-span-4"
+                src={gambar[posisiGambar].data[0]}
+              />
               {hasil ? (
-                <div className="col-start-8 col-span-12 space-y-5">
-                  <h1 className="text-xl font-bold">Hasil</h1>
+                <div className="xl:col-start-7 col-span-12 space-y-5">
+                  <h1 className="text-base md:text-xl font-bold">Hasil</h1>
                   <>
                     {gambar[posisiGambar].data[2].map((datu, index) => (
                       <button
                         onClick={tampilkanHasil}
                         key={index}
-                        className="w-full text-center bg-gray-100 font-bold py-3 rounded-md"
+                        className="w-full text-center bg-gray-100 font-bold p-2 rounded-md"
                       >
                         {datu}
                       </button>
                     ))}
                     <button
-                      onClick={gambarSelanjutnya}
-                      className="w-full bg-red-500 text-white font-bold py-3 rounded-md"
+                      onClick={
+                        gambar[posisiGambar].data[1][0] == 12
+                          ? location.reload("/tesbutawarna")
+                          : gambarSelanjutnya
+                      }
+                      className="w-full bg-red-500 text-white text-sm sm:text-base font-bold p-2 rounded-md"
                     >
-                      Gambar selanjutnya
+                      {gambar[posisiGambar].data[1][0] == 12
+                        ? "Ulang?"
+                        : "Gambar selanjutnya"}
                     </button>
                   </>
                 </div>
               ) : (
                 <>
-                  <div className="col-start-9 col-span-5 space-y-5">
+                  <div className="xl:col-start-7 2xl:col-start-8 col-span-12 space-y-5">
                     <h1 className="text-xl font-bold">Apa yang kamu lihat?</h1>
                     {gambar[posisiGambar].data[1].map((datu, index) => (
                       <button
                         onClick={tampilkanHasil}
                         key={index}
-                        className="w-full text-center bg-gray-100 font-bold py-3 rounded-md"
+                        className="w-full text-center bg-gray-100 text-sm sm:text-base font-bold py-3 rounded-md"
                       >
                         {datu}
                       </button>
@@ -207,71 +214,70 @@ const TesButaWarna = () => {
           <div className="px-0 lg:px-60 xl:px-96 space-y-10">
             <div>
               <h2 className="text-lg sm:text-xl font-bold">
-                Pengenalan kalkulator siklus tidur
+                Pengenalan tes buta warna
               </h2>
               <p className="text-sm sm:text-base mt-2">
-                Kalkulator siklus tidur adalah alat yang dirancang untuk
-                membantu menghitung dan memantau pola tidur seseorang. Alat ini
-                biasanya berfungsi dengan mengumpulkan informasi dari pengguna
-                mengenai waktu tidur mereka, lalu menggunakan algoritma untuk
-                menganalisis data tersebut dan memberikan informasi mengenai
-                siklus tidur pengguna.
+                Tes buta warna adalah pemeriksaan yang dilakukan untuk
+                menentukan apakah seseorang mengalami kesulitan dalam membedakan
+                warna tertentu. Tes ini bertujuan untuk mengidentifikasi jenis
+                buta warna yang dialami dan seberapa parah kondisi tersebut.
               </p>
             </div>
             <div>
-              <h2 className="text-lg sm:text-xl font-bold">Tabel jam tidur</h2>
+              <h2 className="text-lg sm:text-xl font-bold">Gejala</h2>
               <p className="text-sm sm:text-base mt-2">
-                Sebagian orang tidak menyadari jumlah tidur yang mereka
-                butuhkan, meskipun kebanyakan orang dewasa dianjurkan tidur
-                tujuh hingga sembilan jam per malam, dengan kebutuhan lebih
-                tinggi untuk bayi, anak-anak, dan remaja; jumlah tidur yang
-                optimal dapat bervariasi tergantung kondisi kesehatan individu.
+                Gejala umum dari buta warna adalah perubahan penglihatan Anda.
+                Misalnya, mungkin sulit membedakan antara warna merah dan hijau
+                pada lampu lalu lintas. Warnanya mungkin nampak kurang cerah
+                dari sebelumnya. Perbedaan corak warna mungkin semua nampak
+                sama.
               </p>
-              <table
-                className="border border-collapse border-black mt-10"
-                cellPadding={10}
-              >
-                <tr>
-                  <th className="text-sm sm:text-base border border-collapse border-black">
-                    Kategori
-                  </th>
-                  <th className="text-sm sm:text-base border border-collapse border-black">
-                    Rentang usia
-                  </th>
-                  <th className="text-sm sm:text-base border border-collapse border-black">
-                    Rekomendasi tidur harian
-                  </th>
-                </tr>
-                {/* {tableJamTidur.map((dataJamTidur, index) => (
-                  <tr key={index}>
-                    <td className="text-sm sm:text-base border border-collapse border-black">
-                      {dataJamTidur.kategori}
-                    </td>
-                    <td className="text-sm sm:text-base border border-collapse border-black">
-                      {dataJamTidur.rentangUsia}
-                    </td>
-                    <td className="text-sm sm:text-base border border-collapse border-black">
-                      {dataJamTidur.rekomendasi}
-                    </td>
-                  </tr>
-                ))} */}
-              </table>
+              <p className="text-sm sm:text-base mt-2">
+                Buta warna sering muncul ketika masih muda, ketika anak-anak
+                mempelajari warna. Pada beberapa orang, masalah ini tidak
+                terdeteksi karena mereka belajar mengasosiasikan warna khusus
+                dengan benda tertentu.
+              </p>
+              <p className="text-sm sm:text-base mt-2">
+                Misalnya mereka mengetahui bahwa warna rumput adalah hijau
+                sehingga mereka menyebut warna yang mereka lihat hijau. Jika
+                gejalanya ringan, orang lain mungkin tidak menyadari jika mereka
+                menderita buta warna.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-lg sm:text-xl font-bold">Penyebab</h2>
+              <p className="text-sm sm:text-base my-2">
+                Buta warna umumnya terjadi karena masalah pada sel-sel reseptor
+                warna di retina mata. Berikut adalah beberapa penyebab utama
+                buta warna:
+              </p>
+              <ul className="text-sm sm:text-base list-disc list-inside">
+                <li>Genetik (Bawaan)</li>
+                <li>Kerusakan atau Penyakit pada Mata</li>
+                <li>Efek Penuaan</li>
+                <li>Cedera atau Kerusakan pada Otak atau Saraf Optik</li>
+                <li>Pengaruh Obat-obatan atau Bahan Kimia</li>
+                <li>Paparan Berlebih terhadap Cahaya Terang</li>
+              </ul>
             </div>
             <div>
               <h2 className="text-lg sm:text-xl font-bold">
-                Cara Meningkatkan Tidur
+                Cara mencegah buta warna
               </h2>
               <p className="text-sm sm:text-base my-2">
-                Sejumlah perubahan gaya hidup sederhana dapat diterapkan untuk
-                meningkatkan kualitas tidur, yang dapat menghasilkan kesehatan
-                fisik, kognitif, dan emosional yang lebih baik.
+                Meskipun buta warna yang disebabkan oleh faktor genetik tidak
+                dapat dicegah, ada beberapa langkah yang bisa diambil untuk
+                mencegah atau mengurangi risiko gangguan penglihatan warna
+                akibat faktor eksternal. Berikut beberapa cara mencegah buta
+                warna yang terkait dengan faktor non-genetik:
               </p>
               <ul className="text-sm sm:text-base list-disc list-inside">
-                <li>Hindari kafein</li>
-                <li>Kurangi konsumsi alkohol sebelum tidur</li>
-                <li>Singkirkan perangkat elektronik</li>
-                <li>Berolahraga setiap hari</li>
-                <li>Jadikan kamar tidur gelap dan tenang</li>
+                <li>Lindungi Mata dari Paparan Cahaya Terang</li>
+                <li>Kurangi Paparan terhadap Bahan Kimia Berbahaya</li>
+                <li>Hindari Merokok dan Konsumsi Alkohol Berlebihan</li>
+                <li>Periksa Mata Secara Rutin</li>
+                <li>Perhatikan Asupan Nutrisi untuk Kesehatan Mata</li>
               </ul>
             </div>
             <div>
