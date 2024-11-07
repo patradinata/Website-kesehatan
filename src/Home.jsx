@@ -163,7 +163,11 @@ const Home = () => {
               Temukan teman baru, tukar pengalaman, dan jadilah bagian dari
               perjalanan seru bersama komunitas kami.
             </p>
-            <a className="bg-yellow-400 p-3 rounded-md text-lg font-bold text-zinc-700">
+            <a
+            target="_blank"
+              href="https://chat.whatsapp.com/IbhgFpIKIowIREo6pOJMIQ"
+              className="bg-yellow-400 p-3 rounded-md text-lg font-bold text-zinc-700"
+            >
               Bergabung 🚀
             </a>
           </div>
