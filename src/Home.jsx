@@ -3,11 +3,64 @@ import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import { BsX } from "react-icons/bs";
 import { IoIosArrowDropup } from "react-icons/io";
+import { BsPersonStanding } from "react-icons/bs";
+import { GiNightSleep } from "react-icons/gi";
+import { TbBabyCarriageFilled } from "react-icons/tb";
+import { FaRegEye } from "react-icons/fa";
+import { FaBrain } from "react-icons/fa";
 import Header from "./components/Header";
 
 const Home = () => {
   const [promoStatus, setPromoStatus] = useState(true);
   const [toTopActive, toTopStatus] = useState(false);
+
+  const dataLayanan = [
+    {
+      targetCard: "/kalkulatorbmi",
+      iconCard: (
+        <BsPersonStanding className="text-yellow-300 w-[50px] h-[50px] rounded-md" />
+      ),
+      namaCard: "Kalkulator BMI",
+      deskripsiCard:
+        "Cek berat badan ideal Anda dalam detik. Temukan jawaban sehat sekarang juga!",
+    },
+    {
+      targetCard: "/kalkulatorsiklustidur",
+      iconCard: (
+        <GiNightSleep className="text-yellow-300 w-[50px] h-[50px] rounded-md" />
+      ),
+      namaCard: "Kalkulator siklus tidur",
+      deskripsiCard:
+        "Tidur nyenyak, bangun segar. Temukan waktu tidur optimal Anda sekarang juga!",
+    },
+    {
+      targetCard: "/prediksikelahiran",
+      iconCard: (
+        <TbBabyCarriageFilled className="text-yellow-300 w-[50px] h-[50px] rounded-md" />
+      ),
+      namaCard: "Prediksi kelahiran",
+      deskripsiCard:
+        "Ingin tahu kapan bayi Anda lahir? Prediksi usia janin dengan mudah di sini!",
+    },
+    {
+      targetCard: "/tesbutawarna",
+      iconCard: (
+        <FaRegEye className="text-yellow-300 w-[50px] h-[50px] rounded-md" />
+      ),
+      namaCard: "Tes buta warna",
+      deskripsiCard:
+        "Uji penglihatan Anda secara akurat. Siapkah Anda melihat dunia dengan perspektif baru?",
+    },
+    {
+      targetCard: "/cardgame",
+      iconCard: (
+        <FaBrain className="text-yellow-300 w-[50px] h-[50px] rounded-md" />
+      ),
+      namaCard: "Memory card game",
+      deskripsiCard:
+        "Asah ingatan Anda dengan game seru. Berani tantang diri Anda untuk jadi juara?",
+    },
+  ];
 
   window.addEventListener("scroll", () => {
     window.scrollY >= 100 ? toTopStatus(true) : toTopStatus(false);
@@ -15,7 +68,10 @@ const Home = () => {
 
   return (
     <>
-      <div id="home" className="w-full h-full bg-gradient-to-b from-red-600 to-red-400">
+      <div
+        id="home"
+        className="w-full h-full bg-gradient-to-b from-red-600 to-red-400"
+      >
         {promoStatus == true ? (
           <div className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500  py-2 es:px-1 flex flex-row justify-around items-center">
             <div></div>
@@ -58,12 +114,12 @@ const Home = () => {
         </div>
         <div
           id="tujuan"
-          className="grid grid-cols-12 items-center text-white py-40"
+          className="grid grid-cols-12 items-center text-white py-40 px-60"
         >
-          <div className="col-start-3 col-span-4 flex justify-center items-center">
+          <div className="col-span-6 flex justify-center items-center">
             <img className="relative w-full" src="/tujuanKami.png" alt="" />
           </div>
-          <div className="col-start-8 col-span-3">
+          <div className="col-start-9 col-span-4">
             <h1 className="text-5xl font-black">
               Menyejahterakan banyak orang!
             </h1>
@@ -74,9 +130,172 @@ const Home = () => {
             </p>
           </div>
         </div>
+        <div id="layanan" className="py-40 px-60">
+          <h1 className="text-white text-4xl font-black text-center">
+            Layanan yang kami sediakan
+          </h1>
+          <div className="grid grid-cols-12 gap-5 mt-10">
+            {dataLayanan.map((data, index) => (
+              <Link
+                key={index}
+                to={data.targetCard}
+                className="col-span-4 backdrop-blur-lg bg-gray-300 hover:bg-white bg-opacity-20 hover:bg-opacity-20 flex flex-col gap-y-5 p-5 rounded-md"
+              >
+                {data.iconCard}
+                <h2 className="text-lg font-bold text-white">
+                  {data.namaCard}
+                </h2>
+                <p className="text-white">{data.deskripsiCard}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div
+          id="komunitas"
+          className="grid grid-cols-12 items-center py-40 px-60"
+        >
+          <div className="col-span-5 text-white">
+            <h1 className="text-7xl font-black">
+              Ayo Bergabung ke{" "}
+              <span className="text-yellow-300">Komunitas!</span>
+            </h1>
+            <p className="text-lg my-5">
+              Temukan teman baru, tukar pengalaman, dan jadilah bagian dari
+              perjalanan seru bersama komunitas kami.
+            </p>
+            <a className="bg-yellow-400 p-3 rounded-md text-lg font-bold text-zinc-700">
+              Bergabung 🚀
+            </a>
+          </div>
+          <img className="col-start-8 col-span-5" src="/komunitas.png" alt="" />
+        </div>
+        <footer className="p-5">
+          <div className="w-full grid grid-cols-12 bg-white p-10 rounded-md">
+            <div className="col-span-3 flex flex-col justify-between">
+              <div className="space-y-2">
+                <div className="flex items-center gap-x-3">
+                  <img className="w-10" src="/logo.png" alt="" />
+                  <h1 className="text-zinc-700 text-xl font-black">Vitalify</h1>
+                </div>
+                <p>
+                  Dibangun dengan hati untuk menghubungkan, menginspirasi, dan
+                  memberdayakan.
+                </p>
+              </div>
+              <p className="font-bold">© 2024 Vitalify | Joan Orlando Purba</p>
+            </div>
+            <div className="col-start-8 col-span-2">
+              <nav>
+                <ul className="space-y-5">
+                  <li>
+                    <a
+                      className="text-zinc-500 hover:text-black"
+                      href="#tujuan"
+                    >
+                      Tujuan
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-zinc-500 hover:text-black"
+                      href="#layanan"
+                    >
+                      Layanan
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-zinc-500 hover:text-black"
+                      href="#komunitas"
+                    >
+                      Komunitas
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="text-zinc-500 hover:text-black"
+                      target="_blank"
+                      href="https://api.whatsapp.com/send/?phone=62882000561667&text=Hai+Joan+mau+nanya+dong&type=phone_number&app_absent=0"
+                    >
+                      Kontak
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className="col-span-2">
+              <nav>
+                <ul className="space-y-5">
+                  <li>
+                    <Link
+                      className="text-zinc-500 hover:text-black"
+                      to="/kalkulatorbmi"
+                    >
+                      Kalkulator BMI
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-zinc-500 hover:text-black"
+                      to="/kalkulatorsiklustidur"
+                    >
+                      Kalkulator siklus tidur
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-zinc-500 hover:text-black"
+                      to="/prediksikelahiran"
+                    >
+                      Prediksi kelahiran
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-zinc-500 hover:text-black"
+                      to="/tesbutawarna"
+                    >
+                      Tes buta warna
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-zinc-500 hover:text-black"
+                      to="/cardgame"
+                    >
+                      Memory card game
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div>
+              <nav>
+                <ul className="space-y-5">
+                  <li>
+                    <Link
+                      className="text-zinc-500 hover:text-black"
+                      to="https://www.instagram.com/joanorlandopurba/"
+                    >
+                      Instagram
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-zinc-500 hover:text-black"
+                      to="https://www.linkedin.com/in/joanpurba/"
+                    >
+                      Linkedin
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </footer>
         {toTopActive ? (
           <a href="#home">
-            <IoIosArrowDropup className="fixed z-10 right-5 bottom-5 sm:right-10 sm:bottom-10 w-12 h-12 bg-white rounded-md p-2 shadow-xl text-zinc-700" />
+            <IoIosArrowDropup className="fixed z-10 right-5 bottom-5 sm:right-10 sm:bottom-10 w-12 h-12 bg-yellow-400 rounded-md p-2 shadow-xl text-zinc-700" />
           </a>
         ) : (
           <a href="#home">

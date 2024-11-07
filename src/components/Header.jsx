@@ -8,10 +8,10 @@ const Header = () => {
               <a href="#tujuan">Tujuan</a>
             </li>
             <li>
-              <a href="">Layanan</a>
+              <a href="#layanan">Layanan</a>
             </li>
             <li>
-              <a href="">Game</a>
+              <a href="#komunitas">Komunitas</a>
             </li>
             <li>
               <a target="_blank" href="https://api.whatsapp.com/send/?phone=62882000561667&text=Hai+Joan+mau+nanya+dong&type=phone_number&app_absent=0">
