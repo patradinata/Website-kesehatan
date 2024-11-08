@@ -18,7 +18,7 @@ const Home = () => {
     {
       targetCard: "/kalkulatorbmi",
       iconCard: (
-        <BsPersonStanding className="text-yellow-300 w-[50px] h-[50px] rounded-md" />
+        <BsPersonStanding className="text-yellow-300 w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-md" />
       ),
       namaCard: "Kalkulator BMI",
       deskripsiCard:
@@ -27,7 +27,7 @@ const Home = () => {
     {
       targetCard: "/kalkulatorsiklustidur",
       iconCard: (
-        <GiNightSleep className="text-yellow-300 w-[50px] h-[50px] rounded-md" />
+        <GiNightSleep className="text-yellow-300 w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-md" />
       ),
       namaCard: "Kalkulator siklus tidur",
       deskripsiCard:
@@ -36,7 +36,7 @@ const Home = () => {
     {
       targetCard: "/prediksikelahiran",
       iconCard: (
-        <TbBabyCarriageFilled className="text-yellow-300 w-[50px] h-[50px] rounded-md" />
+        <TbBabyCarriageFilled className="text-yellow-300 w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-md" />
       ),
       namaCard: "Prediksi kelahiran",
       deskripsiCard:
@@ -45,7 +45,7 @@ const Home = () => {
     {
       targetCard: "/tesbutawarna",
       iconCard: (
-        <FaRegEye className="text-yellow-300 w-[50px] h-[50px] rounded-md" />
+        <FaRegEye className="text-yellow-300 w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-md" />
       ),
       namaCard: "Tes buta warna",
       deskripsiCard:
@@ -54,7 +54,7 @@ const Home = () => {
     {
       targetCard: "/cardgame",
       iconCard: (
-        <FaBrain className="text-yellow-300 w-[50px] h-[50px] rounded-md" />
+        <FaBrain className="text-yellow-300 w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-md" />
       ),
       namaCard: "Memory card game",
       deskripsiCard:
@@ -88,7 +88,7 @@ const Home = () => {
           <div className="hidden"></div>
         )}
         <Header />
-        <div className="flex flex-col justify-center items-center gap-y-5 py-32 md:py-40">
+        <div className="flex flex-col justify-center items-center gap-y-5 px-2 sm:px-10 xl:px-32 2xl:px-60 py-32 md:py-40">
           <p className="text-white text-sm md:text-base text-center">
             Explore sesuka hati!
           </p>
@@ -150,7 +150,7 @@ const Home = () => {
                 <h2 className="text-base md:text-lg font-bold text-white">
                   {data.namaCard}
                 </h2>
-                <p className="text-sm md:text-base text-white">
+                <p className="text-xs sm:text-sm md:text-base text-white">
                   {data.deskripsiCard}
                 </p>
               </Link>
