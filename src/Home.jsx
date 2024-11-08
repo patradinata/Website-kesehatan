@@ -194,7 +194,7 @@ const Home = () => {
                     Vitalify
                   </h1>
                 </div>
-                <p className="text-sm md:text-base">
+                <p className="text-xs sm:text-sm md:text-base">
                   Dibangun dengan hati untuk menghubungkan, menginspirasi, dan
                   memberdayakan.
                 </p>
