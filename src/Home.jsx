@@ -75,7 +75,7 @@ const Home = () => {
         {promoStatus == true ? (
           <div className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500  py-2 es:px-1 flex flex-row justify-around items-center">
             <div></div>
-            <p className="text-zinc-700 text-sm md:text-md">
+            <p className="text-zinc-700 text-center text-xs sm:text-sm md:text-md">
               Kontak nomor <b>112</b> dan <b>119</b> untuk menelpon{" "}
               <b>ambulans!!</b>
             </p>
@@ -89,12 +89,14 @@ const Home = () => {
         )}
         <Header />
         <div className="flex flex-col justify-center items-center gap-y-5 py-32 md:py-40">
-          <p className="text-white text-sm md:text-base text-center">Explore sesuka hati!</p>
-          <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-black text-center">
+          <p className="text-white text-sm md:text-base text-center">
+            Explore sesuka hati!
+          </p>
+          <h1 className="text-white text-xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-center">
             Akses <span className="text-yellow-300">Kesehatan</span> Berkualitas
           </h1>
           <TypeAnimation
-            className="sm:-mt-3 mb-0 text-white font-black text-3xl md:text-5xl lg:text-6xl"
+            className="-mt-3 sm:mb-0 text-white text-center font-black text-xl sm:text-3xl md:text-5xl lg:text-6xl"
             sequence={[
               "untuk Hidup Lebih Sehat",
               1000,
@@ -108,7 +110,7 @@ const Home = () => {
             speed={50}
             repeat={Infinity}
           />
-          <p className="text-white text-sm md:text-base text-center">
+          <p className="text-white text-xs sm:text-sm md:text-base text-center">
             Game, dan Kalkulator kesehatan untuk hidup yang lebih sejahtera!
           </p>
         </div>
@@ -148,7 +150,9 @@ const Home = () => {
                 <h2 className="text-base md:text-lg font-bold text-white">
                   {data.namaCard}
                 </h2>
-                <p className="text-sm md:text-base text-white">{data.deskripsiCard}</p>
+                <p className="text-sm md:text-base text-white">
+                  {data.deskripsiCard}
+                </p>
               </Link>
             ))}
           </div>
@@ -186,7 +190,9 @@ const Home = () => {
               <div className="space-y-2">
                 <div className="flex items-center gap-x-3">
                   <img className="w-7 lg:w-10" src="/logo.png" alt="" />
-                  <h1 className="text-zinc-700 text-md md:text-xl font-black">Vitalify</h1>
+                  <h1 className="text-zinc-700 text-md md:text-xl font-black">
+                    Vitalify
+                  </h1>
                 </div>
                 <p className="text-sm md:text-base">
                   Dibangun dengan hati untuk menghubungkan, menginspirasi, dan
@@ -202,7 +208,7 @@ const Home = () => {
                 <ul className="space-y-5">
                   <li>
                     <a
-                      className="text-sm md:text-base text-zinc-500 hover:text-black"
+                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       href="#tujuan"
                     >
                       Tujuan
@@ -210,7 +216,7 @@ const Home = () => {
                   </li>
                   <li>
                     <a
-                      className="text-sm md:text-base text-zinc-500 hover:text-black"
+                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       href="#layanan"
                     >
                       Layanan
@@ -218,7 +224,7 @@ const Home = () => {
                   </li>
                   <li>
                     <a
-                      className="text-sm md:text-base text-zinc-500 hover:text-black"
+                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       href="#komunitas"
                     >
                       Komunitas
@@ -226,7 +232,7 @@ const Home = () => {
                   </li>
                   <li>
                     <a
-                      className="text-sm md:text-base text-zinc-500 hover:text-black"
+                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       target="_blank"
                       href="https://api.whatsapp.com/send/?phone=62882000561667&text=Hai+Joan+mau+nanya+dong&type=phone_number&app_absent=0"
                     >
@@ -241,7 +247,7 @@ const Home = () => {
                 <ul className="space-y-5">
                   <li>
                     <Link
-                      className="text-sm md:text-base text-zinc-500 hover:text-black"
+                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       to="/kalkulatorbmi"
                     >
                       Kalkulator BMI
@@ -249,7 +255,7 @@ const Home = () => {
                   </li>
                   <li>
                     <Link
-                      className="text-sm md:text-base text-zinc-500 hover:text-black"
+                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       to="/kalkulatorsiklustidur"
                     >
                       Kalkulator siklus tidur
@@ -257,7 +263,7 @@ const Home = () => {
                   </li>
                   <li>
                     <Link
-                      className="text-sm md:text-base text-zinc-500 hover:text-black"
+                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       to="/prediksikelahiran"
                     >
                       Prediksi kelahiran
@@ -265,7 +271,7 @@ const Home = () => {
                   </li>
                   <li>
                     <Link
-                      className="text-sm md:text-base text-zinc-500 hover:text-black"
+                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       to="/tesbutawarna"
                     >
                       Tes buta warna
@@ -273,7 +279,7 @@ const Home = () => {
                   </li>
                   <li>
                     <Link
-                      className="text-sm md:text-base text-zinc-500 hover:text-black"
+                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       to="/cardgame"
                     >
                       Memory card game
@@ -287,7 +293,7 @@ const Home = () => {
                 <ul className="space-y-5">
                   <li>
                     <Link
-                      className="text-sm md:text-base text-zinc-500 hover:text-black"
+                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       to="https://www.instagram.com/joanorlandopurba/"
                     >
                       Instagram
@@ -295,7 +301,7 @@ const Home = () => {
                   </li>
                   <li>
                     <Link
-                      className="text-sm md:text-base text-zinc-500 hover:text-black"
+                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       to="https://www.linkedin.com/in/joanpurba/"
                     >
                       Linkedin
@@ -304,7 +310,7 @@ const Home = () => {
                 </ul>
               </nav>
             </div>
-            <p className="font-bold block md:hidden">
+            <p className="text-xs sm:text-sm md:text-base font-bold block md:hidden">
               © 2024 Vitalify | Joan Orlando Purba
             </p>
           </div>

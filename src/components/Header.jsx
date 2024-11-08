@@ -32,7 +32,7 @@ const Header = () => {
         </nav>
       </header>
       <div
-        className={`w-full md:hidden flex flex-row justify-between items-center py-2 bg-white z-10 px-8 es:px-3 ${
+        className={`w-full md:hidden flex flex-row justify-between items-center py-2 bg-white z-10 px-2 es:px-3 ${
           navbarStatus ? "shadow-none" : "shadow-lg"
         }`}
       >
