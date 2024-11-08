@@ -242,48 +242,48 @@ const Home = () => {
                 </ul>
               </nav>
             </div>
-            <div className="col-span-3 lg:col-span-3">
+            <div className="col-span-3 lg:col-span-2">
               <nav>
                 <ul className="space-y-5">
                   <li>
-                    <Link
+                    <a
                       className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      to="/kalkulatorbmi"
+                      href="/kalkulatorbmi"
                     >
                       Kalkulator BMI
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      to="/kalkulatorsiklustidur"
+                      href="/kalkulatorsiklustidur"
                     >
                       Kalkulator siklus tidur
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      to="/prediksikelahiran"
+                      href="/prediksikelahiran"
                     >
                       Prediksi kelahiran
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      to="/tesbutawarna"
+                      href="/tesbutawarna"
                     >
                       Tes buta warna
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      to="/cardgame"
+                      href="/cardgame"
                     >
                       Memory card game
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </nav>
@@ -292,20 +292,20 @@ const Home = () => {
               <nav>
                 <ul className="space-y-5">
                   <li>
-                    <Link
+                    <a
                       className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      to="https://www.instagram.com/joanorlandopurba/"
+                      href="https://www.instagram.com/joanorlandopurba/"
                     >
                       Instagram
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      to="https://www.linkedin.com/in/joanpurba/"
+                      href="https://www.linkedin.com/in/joanpurba/"
                     >
                       Linkedin
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </nav>
