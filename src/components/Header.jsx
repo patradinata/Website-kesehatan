@@ -1,6 +1,5 @@
 import Hamburger from "hamburger-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -23,7 +22,7 @@ const Header = () => {
             <li>
               <a
                 target="_blank"
-                href="https://api.whatsapp.com/send/?phone=62882000561667&text=Hai+Joan+mau+nanya+dong&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=6282275338090text=Hai+Joan+mau+nanya+dong&type=phone_number&app_absent=0"
               >
                 Kontak
               </a>
@@ -87,11 +86,12 @@ const Header = () => {
               </a>
             </li>
             <li className="flex w-full">
-              <Link
+              <a
+                href="https://api.whatsapp.com/send/?phone=6282275338090text=Hai+Joan+mau+nanya+dong&type=phone_number&app_absent=0"
                 className="w-full bg-red-500 text-center px-4 rounded-full font-medium text-white border-0 focus:ring-0 py-2"
               >
                 Kontak
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>

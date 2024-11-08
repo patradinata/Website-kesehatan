@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import { BsX } from "react-icons/bs";
 import { IoIosArrowDropup } from "react-icons/io";
@@ -234,7 +233,7 @@ const Home = () => {
                     <a
                       className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       target="_blank"
-                      href="https://api.whatsapp.com/send/?phone=62882000561667&text=Hai+Joan+mau+nanya+dong&type=phone_number&app_absent=0"
+                      href="https://api.whatsapp.com/send/?phone=6282275338090text=Hai+Joan+mau+nanya+dong&type=phone_number&app_absent=0"
                     >
                       Kontak
                     </a>
