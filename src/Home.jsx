@@ -141,9 +141,9 @@ const Home = () => {
           </h1>
           <div className="flex flex-wrap lg:grid grid-cols-12 gap-5 mt-10">
             {dataLayanan.map((data, index) => (
-              <Link
+              <a
                 key={index}
-                to={data.targetCard}
+                href={data.targetCard}
                 className="w-full lg:col-span-4 backdrop-blur-lg bg-gray-300 hover:bg-white bg-opacity-20 hover:bg-opacity-20 flex flex-col gap-y-3 md:gap-y-5 p-5 rounded-md"
               >
                 {data.iconCard}
@@ -153,7 +153,7 @@ const Home = () => {
                 <p className="text-xs sm:text-sm md:text-base text-white">
                   {data.deskripsiCard}
                 </p>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
