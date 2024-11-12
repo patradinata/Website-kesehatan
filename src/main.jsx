@@ -5,8 +5,9 @@ import App from "./Home.jsx";
 import KalkulatorBmi from "./KalkulatorBmi.jsx";
 import PrediksiKelahiran from "./PrediksiKelahiran.jsx";
 import KalkulatorSiklusTidur from "./KalkulatorSiklusTidur.jsx";
-import CardGame from "./CardGame.jsx";
+import CardGame from "./MemoryCardGame.jsx";
 import TesButaWarna from "./TesButaWarna.jsx";
+import Meditasi from "./Meditasi.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
     element: <KalkulatorBmi />,
   },
   {
-    path: "/cardgame",
+    path: "/memorycardgame",
     element: <CardGame />,
   },
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/tesbutawarna",
     element: <TesButaWarna />,
+  },
+  {
+    path: "/meditasi",
+    element: <Meditasi />,
   },
 ]);
 

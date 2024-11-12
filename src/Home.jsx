@@ -7,6 +7,7 @@ import { GiNightSleep } from "react-icons/gi";
 import { TbBabyCarriageFilled } from "react-icons/tb";
 import { FaRegEye } from "react-icons/fa";
 import { FaBrain } from "react-icons/fa";
+import { GiMeditation } from "react-icons/gi";
 import Header from "./components/Header";
 
 const Home = () => {
@@ -51,13 +52,22 @@ const Home = () => {
         "Uji penglihatan Anda secara akurat. Siapkah Anda melihat dunia dengan perspektif baru?",
     },
     {
-      targetCard: "/cardgame",
+      targetCard: "/memorycardgame",
       iconCard: (
         <FaBrain className="text-yellow-300 w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-md" />
       ),
       namaCard: "Memory card game",
       deskripsiCard:
         "Asah ingatan Anda dengan game seru. Berani tantang diri Anda untuk jadi juara?",
+    },
+    {
+      targetCard: "/meditasi",
+      iconCard: (
+        <GiMeditation className="text-yellow-300 w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-md" />
+      ),
+      namaCard: "Meditasi",
+      deskripsiCard:
+        "Temukan ketenangan batin dengan meditasi. Luangkan waktu untuk merilekskan pikiran Anda.",
     },
   ];
 
@@ -233,7 +243,7 @@ const Home = () => {
                     <a
                       className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       target="_blank"
-                      href="https://api.whatsapp.com/send/?phone=6282275338090text=Hai+Joan+mau+nanya+dong&type=phone_number&app_absent=0"
+                      href="https://api.whatsapp.com/send/?phone=6282275338090&text=Halo+Joan+mau+nanya+dong&type=phone_number&app_absent=0"
                     >
                       Kontak
                     </a>
@@ -244,46 +254,16 @@ const Home = () => {
             <div className="col-span-3 lg:col-span-2">
               <nav>
                 <ul className="space-y-5">
-                  <li>
-                    <a
-                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      href="/kalkulatorbmi"
-                    >
-                      Kalkulator BMI
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      href="/kalkulatorsiklustidur"
-                    >
-                      Kalkulator siklus tidur
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      href="/prediksikelahiran"
-                    >
-                      Prediksi kelahiran
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      href="/tesbutawarna"
-                    >
-                      Tes buta warna
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
-                      href="/cardgame"
-                    >
-                      Memory card game
-                    </a>
-                  </li>
+                  {dataLayanan.map((data, index) => (
+                    <li key={index}>
+                      <a
+                        className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
+                        href={data.targetCard}
+                      >
+                        {data.namaCard}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </nav>
             </div>
@@ -303,7 +283,7 @@ const Home = () => {
                       className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black"
                       href="https://www.linkedin.com/in/joanpurba/"
                     >
-                      Linkedin
+                      LinkedIn
                     </a>
                   </li>
                 </ul>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const CardGame = () => {
+const MemoryCardGame = () => {
   const data = [
     {
       id: 1,
@@ -55,40 +55,39 @@ const CardGame = () => {
 
   const shuffledData = [...data].sort(() => Math.random() - 0.5);
 
-  const [cards, setCards] = useState(shuffledData);
-  const [flippedIndices, setFlippedIndices] = useState([]);
-  const [matchedCards, setMatchedCards] = useState([]);
+  const [kartu, setKartu] = useState(shuffledData);
+  const [indikasi, setIndikasi] = useState([]);
+  const [kartuBerpasangan, setKartuBerpasangan] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
-  const [showInstructions, setShowInstructions] = useState(true);
+  const [ketentuanGame, setKetentuanGame] = useState(true);
 
   const handleCardClick = (index) => {
-    if (
-      flippedIndices.includes(index) ||
-      matchedCards.includes(cards[index].id)
-    )
+    if (indikasi.includes(index) || kartuBerpasangan.includes(kartu[index].id))
       return;
-    const newFlipped = [...flippedIndices, index];
-    setFlippedIndices(newFlipped);
+
+    const newFlipped = [...indikasi, index];
+
+    setIndikasi(newFlipped);
 
     if (newFlipped.length === 2) {
-      const [firstIndex, secondIndex] = newFlipped;
-      if (cards[firstIndex].tebakan === cards[secondIndex].tebakan) {
-        setMatchedCards([...matchedCards, cards[firstIndex].id]);
+      const [indexPertama, indexKedua] = newFlipped;
+      if (kartu[indexPertama].tebakan === kartu[indexKedua].tebakan) {
+        setKartuBerpasangan([...kartuBerpasangan, kartu[indexPertama].id]);
       }
-      setTimeout(() => setFlippedIndices([]), 1000);
+      setTimeout(() => setIndikasi([]), 1000);
     }
   };
 
   useEffect(() => {
-    if (matchedCards.length === data.length / 2) {
+    if (kartuBerpasangan.length === data.length / 2) {
       setShowPopup(true);
     }
-  }, [matchedCards]);
+  }, [kartuBerpasangan]);
 
   const handleRestartGame = () => {
-    setCards([...data].sort(() => Math.random() - 0.5));
-    setMatchedCards([]);
-    setFlippedIndices([]);
+    setKartu([...data].sort(() => Math.random() - 0.5));
+    setKartuBerpasangan([]);
+    setIndikasi([]);
     setShowPopup(false);
   };
 
@@ -107,11 +106,11 @@ const CardGame = () => {
           Memory Card Game
         </h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {cards.map((card, index) => (
+          {kartu.map((card, index) => (
             <div
               key={index}
               className={`card transform transition-transform duration-500 cursor-pointer ${
-                flippedIndices.includes(index) || matchedCards.includes(card.id)
+                indikasi.includes(index) || kartuBerpasangan.includes(card.id)
                   ? "flipped"
                   : ""
               }`}
@@ -131,7 +130,7 @@ const CardGame = () => {
         </div>
       </div>
 
-      {showInstructions && (
+      {ketentuanGame && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-4">
           <div className="bg-white p-6 sm:p-8 md:p-10 lg:p-12 rounded-lg shadow-lg max-w-md w-full text-center space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-red-600">
@@ -147,7 +146,7 @@ const CardGame = () => {
               </li>
             </ol>
             <button
-              onClick={() => setShowInstructions(false)}
+              onClick={() => setKetentuanGame(false)}
               className="bg-red-600 hover:bg-red-700 transition-colors text-white px-4 py-2 rounded-lg text-sm sm:text-base"
             >
               Mulai Bermain
@@ -180,4 +179,4 @@ const CardGame = () => {
   );
 };
 
-export default CardGame;
+export default MemoryCardGame;
