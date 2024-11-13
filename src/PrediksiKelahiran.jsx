@@ -335,7 +335,7 @@ const PrediksiKelahiran = () => {
           </p>
         </footer>
       </div>
-      <ToastContainer />
+      <ToastContainer stacked />
     </>
   );
 };

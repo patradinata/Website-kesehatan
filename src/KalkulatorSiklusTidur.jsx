@@ -399,7 +399,7 @@ const KalkulatorBmi = () => {
           </p>
         </footer>
       </div>
-      <ToastContainer />
+      <ToastContainer stacked />
     </>
   );
 };

@@ -25,6 +25,17 @@
   background-image: url("/mata.jpg");
 }
 
+.backgroundHutan {
+  background-image: url('/backgroundTemaHutan.jpg');
+  background-position: center;
+}
+
+.backgroundPantai {
+  background-image: url('/backgroundTemaPantai.jpg');
+  background-position: center;
+}
+
+
 .card {
   perspective: 1000px;
 }
