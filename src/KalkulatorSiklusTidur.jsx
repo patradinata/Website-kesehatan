@@ -53,7 +53,7 @@ const KalkulatorBmi = () => {
       linkArtikel: "https://ciputrahospital.com/cara-agar-cepat-tidur/",
       judulArtikel:
         "11 Cara Ampuh Tidur Cepat dan Nyenyak untuk Atasi Insomnia",
-      authorArtikel: "Ciputra hospitals",
+      authorArtikel: "Ciputra Hospitals",
     },
     {
       linkCover: "/kalkulatorSiklusTidur2.webp",
@@ -61,7 +61,7 @@ const KalkulatorBmi = () => {
         "https://hellosehat.com/sehat/informasi-kesehatan/manfaat-dan-risiko-tidur-di-lantai/",
       judulArtikel:
         "Tidur di Lantai Sebetulnya Baik Atau Buruk Buat Kesehatan?",
-      authorArtikel: "Hallo Sehat",
+      authorArtikel: "Hallosehat",
     },
     {
       linkCover: "/kalkulatorSiklusTidur3.webp",

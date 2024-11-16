@@ -47,14 +47,14 @@ const KalkulatorBmi = () => {
         "https://www.siloamhospitals.com/informasi-siloam/artikel/diet-untuk-menurunkan-berat-badan",
       judulArtikel:
         "10 Tips Diet untuk Menurunkan Berat Badan yang Aman & Sehat",
-      authorArtikel: "Siloam hospitals",
+      authorArtikel: "Siloam Hospitals",
     },
     {
       linkCover: "/kalkulatorBMI2.webp",
       linkArtikel:
         "https://hellosehat.com/kebugaran/olahraga-berat-badan-turun/berbagai-olahraga-menurunkan-berat-badan/",
       judulArtikel: "11 Olahraga Rutin untuk Bantu Menurunkan Berat Badan Anda",
-      authorArtikel: "Hallo Sehat",
+      authorArtikel: "Hallosehat",
     },
     {
       linkCover: "/kalkulatorBMI3.jpg",
