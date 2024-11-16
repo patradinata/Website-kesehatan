@@ -42,8 +42,7 @@ const KalkulatorBmi = () => {
 
   const artikel = [
     {
-      linkCover:
-        "https://mysiloam-api.siloamhospitals.com/public-asset/website-cms/website-cms-16923398009235125.webp",
+      linkCover: "/kalkulatorBMI1.webp",
       linkArtikel:
         "https://www.siloamhospitals.com/informasi-siloam/artikel/diet-untuk-menurunkan-berat-badan",
       judulArtikel:
@@ -51,15 +50,14 @@ const KalkulatorBmi = () => {
       authorArtikel: "Siloam hospitals",
     },
     {
-      linkCover: "/coverBmi2.webp",
+      linkCover: "/kalkulatorBMI2.webp",
       linkArtikel:
         "https://hellosehat.com/kebugaran/olahraga-berat-badan-turun/berbagai-olahraga-menurunkan-berat-badan/",
       judulArtikel: "11 Olahraga Rutin untuk Bantu Menurunkan Berat Badan Anda",
       authorArtikel: "Hallo Sehat",
     },
     {
-      linkCover:
-        "https://www.prudential.co.id/export/sites/prudential-id/id/.galleries/images/page-title/diet-1366x560.jpg",
+      linkCover: "/kalkulatorBMI3.jpg",
       linkArtikel:
         "https://www.prudential.co.id/id/pulse/article/8-rekomendasi-makanan-untuk-diet-yang-patut-dicoba/",
       judulArtikel: "8 Rekomendasi Makanan untuk Diet yang Patut Dicoba",

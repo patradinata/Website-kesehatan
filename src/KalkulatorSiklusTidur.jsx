@@ -49,16 +49,14 @@ const KalkulatorBmi = () => {
 
   const artikel = [
     {
-      linkCover:
-        "https://ciputrahospital.com/wp-content/uploads/2024/09/man-sleeping-bed-morning-2-1-1024x683.jpg",
+      linkCover: "/kalkulatorSiklusTidur1.jpg",
       linkArtikel: "https://ciputrahospital.com/cara-agar-cepat-tidur/",
       judulArtikel:
         "11 Cara Ampuh Tidur Cepat dan Nyenyak untuk Atasi Insomnia",
       authorArtikel: "Ciputra hospitals",
     },
     {
-      linkCover:
-        "https://cdn.hellosehat.com/wp-content/uploads/2018/12/Manfaat-Kesehatan-dan-Risiko-Tidur-di-Lantai.jpg?w=750&q=75",
+      linkCover: "/kalkulatorSiklusTidur2.webp",
       linkArtikel:
         "https://hellosehat.com/sehat/informasi-kesehatan/manfaat-dan-risiko-tidur-di-lantai/",
       judulArtikel:
@@ -66,8 +64,7 @@ const KalkulatorBmi = () => {
       authorArtikel: "Hallo Sehat",
     },
     {
-      linkCover:
-        "https://thumb.viva.co.id/media/frontend/thumbs3/2020/03/25/5e7a4ac4a2461-dokter-tirta-mandira_1265_711.jpg",
+      linkCover: "/kalkulatorSiklusTidur3.webp",
       linkArtikel:
         "https://www.viva.co.id/digital/digilife/1719798-dokter-tirta-jelaskan-pentingnya-tidur-malam-dan-batasi-begadang",
       judulArtikel:

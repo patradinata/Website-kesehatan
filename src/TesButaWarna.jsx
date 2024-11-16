@@ -8,29 +8,26 @@ const TesButaWarna = () => {
   const artikel = [
     {
       linkCover:
-        "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/06/12042347/Buta-Warna-1.jpg.webp",
+        "/tesButaWarna1.webp",
       linkArtikel:
         "https://www.halodoc.com/kesehatan/buta-warna?srsltid=AfmBOoqi-zxz-EifF2KEJyuSNE3VI5pObZXRLhl52oR09PUU8-7Ey1WJ",
       judulArtikel: "Buta Warna",
       authorArtikel: "Halodoc",
     },
     {
-      linkCover:
-        "https://cdn.hellosehat.com/wp-content/uploads/2018/12/Manfaat-Kesehatan-dan-Risiko-Tidur-di-Lantai.jpg?w=750&q=75",
+      linkCover: "/tesButaWarna2.jpg",
       linkArtikel:
-        "https://hellosehat.com/sehat/informasi-kesehatan/manfaat-dan-risiko-tidur-di-lantai/",
-      judulArtikel:
-        "Tidur di Lantai Sebetulnya Baik Atau Buruk Buat Kesehatan?",
-      authorArtikel: "Hallo Sehat",
+        "https://www.alodokter.com/penyebab-dan-cara-mengatasi-buta-warna",
+      judulArtikel: "Penyebab dan Cara Mengatasi Buta Warna",
+      authorArtikel: "Alodokter",
     },
     {
       linkCover:
-        "https://thumb.viva.co.id/media/frontend/thumbs3/2020/03/25/5e7a4ac4a2461-dokter-tirta-mandira_1265_711.jpg",
+        "/tesButaWarna3.webp",
       linkArtikel:
-        "https://www.viva.co.id/digital/digilife/1719798-dokter-tirta-jelaskan-pentingnya-tidur-malam-dan-batasi-begadang",
-      judulArtikel:
-        "Dokter Tirta Jelaskan Pentingnya Tidur Malam dan Batasi Begadang",
-      authorArtikel: "Viva",
+        "https://hellosehat.com/mata/gangguan-penglihatan/buta-warna-bisa-sembuh-tidak/",
+      judulArtikel: "Apakah Buta Warna Bisa Disembuhkan Secara Total?",
+      authorArtikel: "Hallosehat",
     },
   ];
 

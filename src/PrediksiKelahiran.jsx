@@ -82,24 +82,21 @@ const PrediksiKelahiran = () => {
 
   const artikel = [
     {
-      linkCover:
-        "https://d1bpj0tv6vfxyp.cloudfront.net/articles/9b37a862-40a9-46cc-a17c-e700dd292bb6_article_image_url.webp",
+      linkCover: "/prediksiKehamilan1.webp",
       linkArtikel:
         "https://www.halodoc.com/artikel/cukupi-kebutuhan-nutrisi-ibu-hamil-dengan-5-makanan-ini?srsltid=AfmBOoqEYhxwVX8J43c6PMQRXDwHeyfajNNnQhnwkGWsGXtyliaNUwXF",
       judulArtikel: "Cukupi Kebutuhan Nutrisi Ibu Hamil dengan 5 Makanan Ini",
       authorArtikel: "Halodoc",
     },
     {
-      linkCover:
-        "https://sehatnegeriku.kemkes.go.id/wp-content/uploads/2024/06/Olahraga-Bagi-Ibu-Hamil_Foto-Shutterstock-700x536.jpg",
+      linkCover: "/prediksiKehamilan2.jpg",
       linkArtikel:
         "https://sehatnegeriku.kemkes.go.id/baca/blog/20240626/4445835/olahraga-bagi-ibu-hamil/#:~:text=Ibu%20hamil%20pada%20trimester%20pertama,kondisi%20perut%20ibu%20telah%20membesar.",
       judulArtikel: "Olahraga bagi Ibu Hamil",
       authorArtikel: "Sehat Negriku",
     },
     {
-      linkCover:
-        "https://www.prenagen.com/images/uploads/1569219946-6-cara-menjaga-bayi-dalam-kandungan-agar-selalu-sehat-dan-kuat.jpg",
+      linkCover: "/prediksiKehamilan3.jpg",
       linkArtikel:
         "https://www.prenagen.com/id/6-cara-menjaga-bayi-dalam-kandungan-agar-selalu-sehat-dan-kuat",
       judulArtikel: "Tips Agar Janin Sehat dan Sempurna Hingga Dilahirkan",
