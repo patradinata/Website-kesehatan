@@ -20,21 +20,14 @@ const Header = () => {
               <a href="#komunitas">Komunitas</a>
             </li>
             <li>
-              <a
-                target="_blank"
-                href="https://api.whatsapp.com/send/?phone=6282275338090text=Hai+Joan+mau+nanya+dong&type=phone_number&app_absent=0"
-              >
+              <a target="_blank" href="https://api.whatsapp.com/send/?phone=6285788229884text=Hai+Patra+mau+nanya+dong&type=phone_number&app_absent=0">
                 Kontak
               </a>
             </li>
           </ul>
         </nav>
       </header>
-      <div
-        className={`w-full md:hidden flex flex-row justify-between items-center py-2 bg-white z-10 px-2 es:px-3 ${
-          navbarStatus ? "shadow-none" : "shadow-lg"
-        }`}
-      >
+      <div className={`w-full md:hidden flex flex-row justify-between items-center py-2 bg-white z-10 px-2 es:px-3 ${navbarStatus ? "shadow-none" : "shadow-lg"}`}>
         <div className="flex items-center gap-x-3">
           <img className="w-7 lg:w-10" src="/logo.png" alt="" />
           <h1 className="text-red-500 text-xl font-black">Vitalify</h1>
@@ -53,41 +46,28 @@ const Header = () => {
           color="#ef4444"
         />
       </div>
-      <section
-        className={`w-full ${
-          navbarStatus ? "absolute flex z-10" : "hidden"
-        } justify-center items-center bg-white py-5 shadow-lg`}
-      >
+      <section className={`w-full ${navbarStatus ? "absolute flex z-10" : "hidden"} justify-center items-center bg-white py-5 shadow-lg`}>
         <div></div>
         <nav className="w-full px-10">
           <ul className="flex flex-col items-center gap-y-10">
             <li className="">
-              <a
-                href="#tujuan"
-                className="text-sm font-medium text-slate-800 hover:text-blue-600 transition-all"
-              >
+              <a href="#tujuan" className="text-sm font-medium text-slate-800 hover:text-blue-600 transition-all">
                 Tujuan
               </a>
             </li>
             <li className="">
-              <a
-                href="#layanan"
-                className="text-sm font-medium text-slate-800 hover:text-blue-600 transition-all"
-              >
+              <a href="#layanan" className="text-sm font-medium text-slate-800 hover:text-blue-600 transition-all">
                 Layanan
               </a>
             </li>
             <li className="">
-              <a
-                href="#komunitas"
-                className="text-sm font-medium text-slate-800 hover:text-blue-600 transition-all"
-              >
+              <a href="#komunitas" className="text-sm font-medium text-slate-800 hover:text-blue-600 transition-all">
                 Komunitas
               </a>
             </li>
             <li className="flex w-full">
               <a
-                href="https://api.whatsapp.com/send/?phone=6282275338090text=Hai+Joan+mau+nanya+dong&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=6285788229884text=Hai+Patra+mau+nanya+dong&type=phone_number&app_absent=0"
                 className="w-full bg-red-500 text-center px-4 rounded-full text-sm font-medium text-white border-0 focus:ring-0 py-2"
               >
                 Kontak

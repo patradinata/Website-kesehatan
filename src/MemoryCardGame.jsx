@@ -15,23 +15,19 @@ const MemoryCardGame = () => {
     },
     {
       id: 2,
-      tebakan:
-        "https://cdn.antaranews.com/cache/1200x800/2020/12/20/Screenshot_2020-12-20-10-16-58-41_copy_1080x720.jpg",
+      tebakan: "https://cdn.antaranews.com/cache/1200x800/2020/12/20/Screenshot_2020-12-20-10-16-58-41_copy_1080x720.jpg",
     },
     {
       id: 2,
-      tebakan:
-        "https://cdn.antaranews.com/cache/1200x800/2020/12/20/Screenshot_2020-12-20-10-16-58-41_copy_1080x720.jpg",
+      tebakan: "https://cdn.antaranews.com/cache/1200x800/2020/12/20/Screenshot_2020-12-20-10-16-58-41_copy_1080x720.jpg",
     },
     {
       id: 3,
-      tebakan:
-        "https://lingkarwilis.com/wp-content/uploads/2024/05/pexels-pixabay-327098-scaled.jpg",
+      tebakan: "https://lingkarwilis.com/wp-content/uploads/2024/05/pexels-pixabay-327098-scaled.jpg",
     },
     {
       id: 3,
-      tebakan:
-        "https://lingkarwilis.com/wp-content/uploads/2024/05/pexels-pixabay-327098-scaled.jpg",
+      tebakan: "https://lingkarwilis.com/wp-content/uploads/2024/05/pexels-pixabay-327098-scaled.jpg",
     },
     {
       id: 4,
@@ -43,13 +39,11 @@ const MemoryCardGame = () => {
     },
     {
       id: 5,
-      tebakan:
-        "https://www.astronauts.id/blog/wp-content/uploads/2023/04/Manfaat-Kesehatan-Buah-Mangga-yang-Mungkin-Belum-Kamu-Ketahui.jpg",
+      tebakan: "https://www.astronauts.id/blog/wp-content/uploads/2023/04/Manfaat-Kesehatan-Buah-Mangga-yang-Mungkin-Belum-Kamu-Ketahui.jpg",
     },
     {
       id: 5,
-      tebakan:
-        "https://www.astronauts.id/blog/wp-content/uploads/2023/04/Manfaat-Kesehatan-Buah-Mangga-yang-Mungkin-Belum-Kamu-Ketahui.jpg",
+      tebakan: "https://www.astronauts.id/blog/wp-content/uploads/2023/04/Manfaat-Kesehatan-Buah-Mangga-yang-Mungkin-Belum-Kamu-Ketahui.jpg",
     },
   ];
 
@@ -62,8 +56,7 @@ const MemoryCardGame = () => {
   const [ketentuanGame, setKetentuanGame] = useState(true);
 
   const handleCardClick = (index) => {
-    if (indikasi.includes(index) || kartuBerpasangan.includes(kartu[index].id))
-      return;
+    if (indikasi.includes(index) || kartuBerpasangan.includes(kartu[index].id)) return;
 
     const newFlipped = [...indikasi, index];
 
@@ -94,36 +87,18 @@ const MemoryCardGame = () => {
   return (
     <div className="flex flex-col h-screen gap-y-2">
       <div className="flex p-5">
-        <Link
-          className="flex items-center gap-x-1 bg-red-600 px-5 py-2 rounded-3xl text-white"
-          to="/"
-        >
+        <Link className="flex items-center gap-x-1 bg-red-600 px-5 py-2 rounded-3xl text-white" to="/">
           <p className="text-base sm:text-xl font-semibold">Back</p>
         </Link>
       </div>
       <div className="flex-grow overflow-y-auto p-5 space-y-5">
-        <h1 className="text-xl lg:text-3xl font-extrabold text-center">
-          Memory Card Game
-        </h1>
+        <h1 className="text-xl lg:text-3xl font-extrabold text-center">Memory Card Game</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {kartu.map((card, index) => (
-            <div
-              key={index}
-              className={`card transform transition-transform duration-500 cursor-pointer ${
-                indikasi.includes(index) || kartuBerpasangan.includes(card.id)
-                  ? "flipped"
-                  : ""
-              }`}
-              onClick={() => handleCardClick(index)}
-            >
+            <div key={index} className={`card transform transition-transform duration-500 cursor-pointer ${indikasi.includes(index) || kartuBerpasangan.includes(card.id) ? "flipped" : ""}`} onClick={() => handleCardClick(index)}>
               <div className="card-inner relative w-full h-32 sm:h-40 md:h-48 lg:h-56">
-                <div className="card-front absolute w-full h-full flex items-center justify-center text-xl font-bold text-white bg-red-500 rounded-lg">
-                  ?
-                </div>
-                <img
-                  src={card.tebakan}
-                  className="card-back object-cover absolute w-full h-full flex items-center justify-center text-xl font-bold border-4 border-red-500 rounded-lg transform rotate-y-180"
-                />
+                <div className="card-front absolute w-full h-full flex items-center justify-center text-xl font-bold text-white bg-red-500 rounded-lg">?</div>
+                <img src={card.tebakan} className="card-back object-cover absolute w-full h-full flex items-center justify-center text-xl font-bold border-4 border-red-500 rounded-lg transform rotate-y-180" />
               </div>
             </div>
           ))}
@@ -133,9 +108,7 @@ const MemoryCardGame = () => {
       {ketentuanGame && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-4">
           <div className="bg-white p-6 sm:p-8 md:p-10 lg:p-12 rounded-lg shadow-lg max-w-md w-full text-center space-y-4">
-            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-red-600">
-              Ketentuan Permainan
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-red-600">Ketentuan Permainan</h2>
             <ol className="text-left text-sm sm:text-base list-decimal list-inside text-gray-700 mb-4">
               <li>
                 Cari 2 <b>buah</b> yang sama!
@@ -145,10 +118,7 @@ const MemoryCardGame = () => {
                 Cari sampai ketemu 5 pasang <b>buah!</b>
               </li>
             </ol>
-            <button
-              onClick={() => setKetentuanGame(false)}
-              className="bg-red-600 hover:bg-red-700 transition-colors text-white px-4 py-2 rounded-lg text-sm sm:text-base"
-            >
+            <button onClick={() => setKetentuanGame(false)} className="bg-red-600 hover:bg-red-700 transition-colors text-white px-4 py-2 rounded-lg text-sm sm:text-base">
               Mulai Bermain
             </button>
           </div>
@@ -160,10 +130,7 @@ const MemoryCardGame = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg text-center">
             <h2 className="text-2xl font-bold mb-4">Selamat kamu menang!</h2>
             <p className="mb-4">Semua buah telah berpasangan</p>
-            <button
-              onClick={handleRestartGame}
-              className="bg-red-600 text-white px-4 py-2 rounded-lg"
-            >
+            <button onClick={handleRestartGame} className="bg-red-600 text-white px-4 py-2 rounded-lg">
               Bermain lagi
             </button>
           </div>
@@ -171,9 +138,7 @@ const MemoryCardGame = () => {
       )}
 
       <footer className="w-full py-2 bg-white">
-        <p className="text-sm sm:text-base text-center">
-          &copy;Joan Orlando Purba | 2024
-        </p>
+        <p className="text-sm sm:text-base text-center">&copy;Patra-Dinata | 2024</p>
       </footer>
     </div>
   );

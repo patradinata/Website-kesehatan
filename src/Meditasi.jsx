@@ -126,34 +126,22 @@ const Meditasi = () => {
       {!meditasiPage && (
         <div className="h-screen p-5 flex flex-col justify-between gap-y-5">
           <div className="flex">
-            <Link
-              className="flex items-center gap-x-1 bg-red-600 px-5 py-2 rounded-3xl text-white"
-              to="/"
-            >
+            <Link className="flex items-center gap-x-1 bg-red-600 px-5 py-2 rounded-3xl text-white" to="/">
               <p className="text-base sm:text-xl font-semibold">Back</p>
             </Link>
           </div>
           <div className="flex justify-center">
-            <form
-              className="flex flex-col 2xl:flex-row justify-between items-end"
-              onSubmit={handleStart}
-            >
+            <form className="flex flex-col 2xl:flex-row justify-between items-end" onSubmit={handleStart}>
               <ul className="w-full flex items-end gap-3">
                 <li className="w-full md:w-[120px] sm:w-full xl:w-[100px]">
-                  <select
-                    onChange={(e) => setTema(e.target.value)}
-                    className="bg-gray-100 outline-none rounded-md w-full text-sm py-3"
-                  >
+                  <select onChange={(e) => setTema(e.target.value)} className="bg-gray-100 outline-none rounded-md w-full text-sm py-3">
                     <option value="">Tema</option>
                     <option value="hutan">Hutan</option>
                     <option value="pantai">Pantai</option>
                   </select>
                 </li>
                 <li className="w-full md:w-[120px] sm:w-full xl:w-[100px]">
-                  <select
-                    onChange={(e) => setDurasi(Number(e.target.value))}
-                    className="bg-gray-100 outline-none rounded-md w-full text-sm py-3"
-                  >
+                  <select onChange={(e) => setDurasi(Number(e.target.value))} className="bg-gray-100 outline-none rounded-md w-full text-sm py-3">
                     <option value="0">Durasi</option>
                     <option value="15">15 menit</option>
                     <option value="30">30 menit</option>
@@ -161,10 +149,7 @@ const Meditasi = () => {
                   </select>
                 </li>
                 <li className="flex w-full xl:w-[150px] justify-center">
-                  <button
-                    type="submit"
-                    className="bg-red-500 text-white font-semibold w-full text-sm p-3 rounded-md"
-                  >
+                  <button type="submit" className="bg-red-500 text-white font-semibold w-full text-sm p-3 rounded-md">
                     Mulai
                   </button>
                 </li>
@@ -172,9 +157,7 @@ const Meditasi = () => {
             </form>
           </div>
           <footer className="w-full">
-            <p className="text-sm sm:text-base text-center">
-              &copy; Joan Orlando Purba | 2024
-            </p>
+            <p className="text-sm sm:text-base text-center">&copy; Patra-Dinata | 2024 | All rights reserved</p>
           </footer>
         </div>
       )}
@@ -185,22 +168,15 @@ const Meditasi = () => {
           <div className="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
 
           <div className="relative z-10 text-white text-3xl font-bold mb-5">
-            {String(sisaWaktu.minutes).padStart(2, "0")}:
-            {String(sisaWaktu.seconds).padStart(2, "0")}
+            {String(sisaWaktu.minutes).padStart(2, "0")}:{String(sisaWaktu.seconds).padStart(2, "0")}
           </div>
 
           <div className="relative z-10 flex gap-3">
-            <button
-              onClick={handlePauseResume}
-              className="bg-yellow-500 px-3 py-2 md:px-5 md:py-3 rounded-md text-white font-semibold flex items-center gap-2"
-            >
+            <button onClick={handlePauseResume} className="bg-yellow-500 px-3 py-2 md:px-5 md:py-3 rounded-md text-white font-semibold flex items-center gap-2">
               {pause ? <IoMdPlay size={20} /> : <IoMdPause size={20} />}
             </button>
 
-            <button
-              onClick={handleStopClick}
-              className="bg-red-600 text-sm px-3 py-2 md:px-5 md:py-3 rounded-md text-white font-semibold"
-            >
+            <button onClick={handleStopClick} className="bg-red-600 text-sm px-3 py-2 md:px-5 md:py-3 rounded-md text-white font-semibold">
               Berhenti Meditasi
             </button>
           </div>
@@ -211,20 +187,12 @@ const Meditasi = () => {
         <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
           <div className="bg-white p-5 rounded-md shadow-lg w-80">
             <h2 className="text-lg font-semibold text-center">Konfirmasi</h2>
-            <p className="text-sm text-center my-3">
-              Apakah Anda yakin ingin menghentikan meditasi?
-            </p>
+            <p className="text-sm text-center my-3">Apakah Anda yakin ingin menghentikan meditasi?</p>
             <div className="flex justify-around mt-4">
-              <button
-                onClick={confirmStop}
-                className="bg-red-500 text-sm text-white font-semibold px-4 py-2 rounded-md"
-              >
+              <button onClick={confirmStop} className="bg-red-500 text-sm text-white font-semibold px-4 py-2 rounded-md">
                 Ya, Hentikan
               </button>
-              <button
-                onClick={cancelStop}
-                className="bg-gray-300 text-sm px-4 py-2 rounded-md"
-              >
+              <button onClick={cancelStop} className="bg-gray-300 text-sm px-4 py-2 rounded-md">
                 Batal
               </button>
             </div>
@@ -235,17 +203,10 @@ const Meditasi = () => {
       {popUp && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50">
           <div className="bg-white p-5 rounded-md shadow-lg w-80">
-            <h2 className="text-lg font-semibold text-center">
-              Selamat Datang
-            </h2>
-            <p className="text-sm text-center my-3">
-              Silakan pilih tema dan durasi meditasi untuk memulai.
-            </p>
+            <h2 className="text-lg font-semibold text-center">Selamat Datang</h2>
+            <p className="text-sm text-center my-3">Silakan pilih tema dan durasi meditasi untuk memulai.</p>
             <div className="flex justify-center mt-4">
-              <button
-                onClick={() => setPopUp(false)}
-                className="bg-red-500 text-white px-4 py-2 rounded-md"
-              >
+              <button onClick={() => setPopUp(false)} className="bg-red-500 text-white px-4 py-2 rounded-md">
                 Ok
               </button>
             </div>
