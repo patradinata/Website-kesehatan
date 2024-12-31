@@ -151,7 +151,7 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black" target="_blank" href="https://api.whatsapp.com/send/?phone=6282275338090&text=Halo+Joan+mau+nanya+dong&type=phone_number&app_absent=0">
+                    <a className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black" target="_blank" href="https://api.whatsapp.com/send/?phone=6285788229884&text=Halo+Patra+mau+nanya+dong&type=phone_number&app_absent=0">
                       Kontak
                     </a>
                   </li>
