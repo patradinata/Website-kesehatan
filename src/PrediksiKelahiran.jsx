@@ -187,8 +187,10 @@ const PrediksiKelahiran = () => {
                 <li>Risiko komplikasi saat persalinan</li>
                 <li>Plasenta yang mungkin kurang berfungsi dengan baik</li>
               </ul>
+
             </div>
             <div>
+              
               <h2 className="text-lg sm:text-xl font-bold">Formula Menghitung Perkiraan Kelahiran</h2>
               <p className="text-sm sm:text-base my-2">Perkiraan tanggal kelahiran dapat dihitung dengan rumus sebagai berikut.</p>
               <div className="flex flex-col items-start space-y-5 mt-5">
