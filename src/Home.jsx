@@ -180,7 +180,7 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black" href="https://github.com/patradinata/">
+                    <a className="text-xs sm:text-sm md:text-base text-zinc-500 hover:text-black" href="#">
                       Github
                     </a>
                   </li>
